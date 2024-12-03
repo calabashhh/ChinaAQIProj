@@ -61,10 +61,28 @@
                
         // Define labels for the GeoJSON layers
 const layerLabels = {
-    'https://raw.githubusercontent.com/neiugis/animatedmaps/refs/heads/main/arson2020.geojson': 'Arson 2020',
-    'https://raw.githubusercontent.com/neiugis/animatedmaps/refs/heads/main/arson2021.geojson': 'Arson 2021',
-    'https://raw.githubusercontent.com/neiugis/animatedmaps/refs/heads/main/arson2022.geojson': 'Arson 2022',
-    'https://raw.githubusercontent.com/neiugis/animatedmaps/refs/heads/main/arson2023.geojson': 'Arson 2023'
+'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Jan2018_average.geojson': 'January 2018',
+'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Feb2018_average.geojson': 'February 2018',
+'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Mar2018_average.geojson': 'March 2018',
+'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Apr2018_average.geojson': 'April 2018',
+'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/May2018_average.geojson': 'May 2018',
+'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Jun2018_average.geojson': 'June 2018',
+'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Jul2018_average.geojson': 'July 2018',
+'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Aug2018_average.geojson': 'August 2018',
+'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Sep2018_average.geojson': 'September 2018',
+'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Oct2018_average.geojson': 'October 2018',
+'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Nov2018_average.geojson': 'November 2018',
+'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Dec2018_average.geojson': 'December 2018',
+
+
+      
+
+
+
+   // 'https://raw.githubusercontent.com/neiugis/animatedmaps/refs/heads/main/arson2020.geojson': 'Arson 2020',
+  //  'https://raw.githubusercontent.com/neiugis/animatedmaps/refs/heads/main/arson2021.geojson': 'Arson 2021',
+  //  'https://raw.githubusercontent.com/neiugis/animatedmaps/refs/heads/main/arson2022.geojson': 'Arson 2022',
+  //  'https://raw.githubusercontent.com/neiugis/animatedmaps/refs/heads/main/arson2023.geojson': 'Arson 2023'
 };
         
         // Add a legend to the map
@@ -88,10 +106,19 @@ function updateLegend(label) {
 
      // List of GeoJSON files (each representing a timestamp)
 const geojsonFiles = [
-    'https://raw.githubusercontent.com/neiugis/animatedmaps/refs/heads/main/arson2020.geojson', // Replace with actual file paths
-    'https://raw.githubusercontent.com/neiugis/animatedmaps/refs/heads/main/arson2021.geojson',
-    'https://raw.githubusercontent.com/neiugis/animatedmaps/refs/heads/main/arson2022.geojson',
-    'https://raw.githubusercontent.com/neiugis/animatedmaps/refs/heads/main/arson2023.geojson'
+    'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Jan2018_average.geojson',
+    'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Feb2018_average.geojson',
+    'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Mar2018_average.geojson',
+    'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Apr2018_average.geojson',
+    'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/May2018_average.geojson',
+    'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Jun2018_average.geojson',
+    'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Jul2018_average.geojson',
+    'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Aug2018_average.geojson',
+    'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Sep2018_average.geojson',
+    'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Oct2018_average.geojson',
+    'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Nov2018_average.geojson',
+    'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/refs/heads/main/Dec2018_average.geojson',
+
 ];
 
 // Function to load and display a GeoJSON file
