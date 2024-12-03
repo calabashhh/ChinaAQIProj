@@ -1,0 +1,3846 @@
+{
+  "type": "FeatureCollection",
+  "name": "ChinaAQI_ChinaAQIPoints_Updated_Dec2014",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 75.34421134060007,
+        "bottom": 37.50001748438724,
+        "right": 78.80831457087633,
+        "top": 40.50001888313822,
+        "GEOJOIN": 1,
+        "ChinaAQIPoints_Updated_Name": "Kashi",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/kashi/",
+        "ChinaAQIPoints_Updated_file_name": "Kashi-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 39.5418277,
+        "ChinaAQIPoints_Updated_Long": 75.4668893,
+        "ChinaAQIPoints_Updated_Current AQI": 137,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                75.34421134060007,
+                39.000018183762734
+              ],
+              [
+                76.21023714816913,
+                40.50001888313822
+              ],
+              [
+                77.94228876330727,
+                40.50001888313822
+              ],
+              [
+                78.80831457087633,
+                39.000018183762734
+              ],
+              [
+                77.94228876330727,
+                37.50001748438724
+              ],
+              [
+                76.21023714816913,
+                37.50001748438724
+              ],
+              [
+                75.34421134060007,
+                39.000018183762734
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 77.94228876330727,
+        "bottom": 30.000013987509792,
+        "right": 81.40639199358353,
+        "top": 33.00001538626077,
+        "GEOJOIN": 5,
+        "ChinaAQIPoints_Updated_Name": "Ngari Station, Ngari Sanai",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/alidiqu/alijiancezhan/",
+        "ChinaAQIPoints_Updated_file_name": "ngari-station, ngari sanai-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 32.5022789,
+        "ChinaAQIPoints_Updated_Long": 80.0912813,
+        "ChinaAQIPoints_Updated_Current AQI": 13,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                77.94228876330727,
+                31.50001468688528
+              ],
+              [
+                78.80831457087633,
+                33.00001538626077
+              ],
+              [
+                80.54036618601447,
+                33.00001538626077
+              ],
+              [
+                81.40639199358353,
+                31.50001468688528
+              ],
+              [
+                80.54036618601447,
+                30.000013987509792
+              ],
+              [
+                78.80831457087633,
+                30.000013987509792
+              ],
+              [
+                77.94228876330727,
+                31.50001468688528
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 85.73652103142886,
+        "bottom": 43.5000202818892,
+        "right": 89.20062426170513,
+        "top": 46.500021680640174,
+        "GEOJOIN": 2,
+        "ChinaAQIPoints_Updated_Name": "Toll office, Wulumuqi",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/wulumuqi/shoufeisuo/",
+        "ChinaAQIPoints_Updated_file_name": "toll-office, wulumuqi-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 43.7748855,
+        "ChinaAQIPoints_Updated_Long": 87.495167,
+        "ChinaAQIPoints_Updated_Current AQI": 155,
+        "Monthly_average": 173.928571428571
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                85.73652103142886,
+                45.00002098126468
+              ],
+              [
+                86.60254683899792,
+                46.500021680640174
+              ],
+              [
+                88.33459845413607,
+                46.500021680640174
+              ],
+              [
+                89.20062426170513,
+                45.00002098126468
+              ],
+              [
+                88.33459845413607,
+                43.5000202818892
+              ],
+              [
+                86.60254683899792,
+                43.5000202818892
+              ],
+              [
+                85.73652103142886,
+                45.00002098126468
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 85.73652103142886,
+        "bottom": 46.500021680640174,
+        "right": 89.20062426170513,
+        "top": 49.500023079391156,
+        "GEOJOIN": 3,
+        "ChinaAQIPoints_Updated_Name": "City Station, Altay",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/aletaidiqu/shizhan/",
+        "ChinaAQIPoints_Updated_file_name": "city-station, altay-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 47.82184,
+        "ChinaAQIPoints_Updated_Long": 88.0685215,
+        "ChinaAQIPoints_Updated_Current AQI": 50,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                85.73652103142886,
+                48.000022380015665
+              ],
+              [
+                86.60254683899792,
+                49.500023079391156
+              ],
+              [
+                88.33459845413607,
+                49.500023079391156
+              ],
+              [
+                89.20062426170513,
+                48.000022380015665
+              ],
+              [
+                88.33459845413607,
+                46.500021680640174
+              ],
+              [
+                86.60254683899792,
+                46.500021680640174
+              ],
+              [
+                85.73652103142886,
+                48.000022380015665
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 88.33459845413607,
+        "bottom": 27.000012588758814,
+        "right": 91.79870168441232,
+        "top": 30.000013987509792,
+        "GEOJOIN": 6,
+        "ChinaAQIPoints_Updated_Name": "Lhasa",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/lhasa/",
+        "ChinaAQIPoints_Updated_file_name": "Lhasa-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 29.6487493,
+        "ChinaAQIPoints_Updated_Long": 90.8334996,
+        "ChinaAQIPoints_Updated_Current AQI": 53,
+        "Monthly_average": 126.551724137931
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                88.33459845413607,
+                28.500013288134305
+              ],
+              [
+                89.20062426170513,
+                30.000013987509792
+              ],
+              [
+                90.93267587684326,
+                30.000013987509792
+              ],
+              [
+                91.79870168441232,
+                28.500013288134305
+              ],
+              [
+                90.93267587684326,
+                27.000012588758814
+              ],
+              [
+                89.20062426170513,
+                27.000012588758814
+              ],
+              [
+                88.33459845413607,
+                28.500013288134305
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 88.33459845413607,
+        "bottom": 42.00001958251371,
+        "right": 91.79870168441232,
+        "top": 45.00002098126468,
+        "GEOJOIN": 4,
+        "ChinaAQIPoints_Updated_Name": "h?m? sh?f?n xu?xi?o, Kumul",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/hamidiqu/hamishifanxuexiao/",
+        "ChinaAQIPoints_Updated_file_name": "h?m?-sh?f?n xu?xi?o, kumul-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 42.8949498,
+        "ChinaAQIPoints_Updated_Long": 91.1441016,
+        "ChinaAQIPoints_Updated_Current AQI": 132,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                88.33459845413607,
+                43.5000202818892
+              ],
+              [
+                89.20062426170513,
+                45.00002098126468
+              ],
+              [
+                90.93267587684326,
+                45.00002098126468
+              ],
+              [
+                91.79870168441232,
+                43.5000202818892
+              ],
+              [
+                90.93267587684326,
+                42.00001958251371
+              ],
+              [
+                89.20062426170513,
+                42.00001958251371
+              ],
+              [
+                88.33459845413607,
+                43.5000202818892
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 98.72690814496485,
+        "bottom": 21.000009791256854,
+        "right": 102.19101137524112,
+        "top": 24.000011190007832,
+        "GEOJOIN": 27,
+        "ChinaAQIPoints_Updated_Name": "City convenient service centers, Wenshan",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/wenshanzhou/shibianminfuwuzhongxin/",
+        "ChinaAQIPoints_Updated_file_name": "city-convenient service centers, wenshan-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 23.352918,
+        "ChinaAQIPoints_Updated_Long": 104.1790545,
+        "ChinaAQIPoints_Updated_Current AQI": 109,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                98.72690814496485,
+                22.500010490632345
+              ],
+              [
+                99.59293395253391,
+                24.000011190007832
+              ],
+              [
+                101.32498556767206,
+                24.000011190007832
+              ],
+              [
+                102.19101137524112,
+                22.500010490632345
+              ],
+              [
+                101.32498556767206,
+                21.000009791256854
+              ],
+              [
+                99.59293395253391,
+                21.000009791256854
+              ],
+              [
+                98.72690814496485,
+                22.500010490632345
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 98.72690814496485,
+        "bottom": 24.000011190007832,
+        "right": 102.19101137524112,
+        "top": 27.000012588758814,
+        "GEOJOIN": 8,
+        "ChinaAQIPoints_Updated_Name": "d?l? g?ch?ng, Dali",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/dalizhou/daligucheng/",
+        "ChinaAQIPoints_Updated_file_name": "d?l?-g?ch?ng, dali-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 25.6676935,
+        "ChinaAQIPoints_Updated_Long": 100.0106011,
+        "ChinaAQIPoints_Updated_Current AQI": 42,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                98.72690814496485,
+                25.500011889383323
+              ],
+              [
+                99.59293395253391,
+                27.000012588758814
+              ],
+              [
+                101.32498556767206,
+                27.000012588758814
+              ],
+              [
+                102.19101137524112,
+                25.500011889383323
+              ],
+              [
+                101.32498556767206,
+                24.000011190007832
+              ],
+              [
+                99.59293395253391,
+                24.000011190007832
+              ],
+              [
+                98.72690814496485,
+                25.500011889383323
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 101.32498556767206,
+        "bottom": 22.500010490632345,
+        "right": 104.78908879794831,
+        "top": 25.500011889383323,
+        "GEOJOIN": 13,
+        "ChinaAQIPoints_Updated_Name": "Honghe",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/honghe",
+        "ChinaAQIPoints_Updated_file_name": "Honghe-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 23.3698654,
+        "ChinaAQIPoints_Updated_Long": 103.3467488,
+        "ChinaAQIPoints_Updated_Current AQI": 82,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                101.32498556767206,
+                24.000011190007832
+              ],
+              [
+                102.19101137524112,
+                25.500011889383323
+              ],
+              [
+                103.92306299037925,
+                25.500011889383323
+              ],
+              [
+                104.78908879794831,
+                24.000011190007832
+              ],
+              [
+                103.92306299037925,
+                22.500010490632345
+              ],
+              [
+                102.19101137524112,
+                22.500010490632345
+              ],
+              [
+                101.32498556767206,
+                24.000011190007832
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 101.32498556767206,
+        "bottom": 25.500011889383323,
+        "right": 104.78908879794831,
+        "top": 28.500013288134305,
+        "GEOJOIN": 9,
+        "ChinaAQIPoints_Updated_Name": "Monitoring station, Zhaotong",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/zhaotong/jiancezhan/",
+        "ChinaAQIPoints_Updated_file_name": "monitoring-station, zhaotong-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 27.3343174,
+        "ChinaAQIPoints_Updated_Long": 103.5632927,
+        "ChinaAQIPoints_Updated_Current AQI": 93,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                101.32498556767206,
+                27.000012588758814
+              ],
+              [
+                102.19101137524112,
+                28.500013288134305
+              ],
+              [
+                103.92306299037925,
+                28.500013288134305
+              ],
+              [
+                104.78908879794831,
+                27.000012588758814
+              ],
+              [
+                103.92306299037925,
+                25.500011889383323
+              ],
+              [
+                102.19101137524112,
+                25.500011889383323
+              ],
+              [
+                101.32498556767206,
+                27.000012588758814
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 101.32498556767206,
+        "bottom": 28.500013288134305,
+        "right": 104.78908879794831,
+        "top": 31.50001468688528,
+        "GEOJOIN": 45,
+        "ChinaAQIPoints_Updated_Name": "Sanwayao, Chengdu",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/chengdu/sanwayao",
+        "ChinaAQIPoints_Updated_file_name": "sanwayao,-chengdu-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 30.5667021,
+        "ChinaAQIPoints_Updated_Long": 104.0517466,
+        "ChinaAQIPoints_Updated_Current AQI": 85,
+        "Monthly_average": 144.0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                101.32498556767206,
+                30.000013987509792
+              ],
+              [
+                102.19101137524112,
+                31.50001468688528
+              ],
+              [
+                103.92306299037925,
+                31.50001468688528
+              ],
+              [
+                104.78908879794831,
+                30.000013987509792
+              ],
+              [
+                103.92306299037925,
+                28.500013288134305
+              ],
+              [
+                102.19101137524112,
+                28.500013288134305
+              ],
+              [
+                101.32498556767206,
+                30.000013987509792
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 101.32498556767206,
+        "bottom": 34.50001608563626,
+        "right": 104.78908879794831,
+        "top": 37.50001748438724,
+        "GEOJOIN": 60,
+        "ChinaAQIPoints_Updated_Name": "Lanzhou",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/lanzhou/tielushejiyuan",
+        "ChinaAQIPoints_Updated_file_name": "railway-design institute, lanzhou-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 36.0785389,
+        "ChinaAQIPoints_Updated_Long": 103.5959114,
+        "ChinaAQIPoints_Updated_Current AQI": 137,
+        "Monthly_average": 149.172413793104
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                101.32498556767206,
+                36.00001678501175
+              ],
+              [
+                102.19101137524112,
+                37.50001748438724
+              ],
+              [
+                103.92306299037925,
+                37.50001748438724
+              ],
+              [
+                104.78908879794831,
+                36.00001678501175
+              ],
+              [
+                103.92306299037925,
+                34.50001608563626
+              ],
+              [
+                102.19101137524112,
+                34.50001608563626
+              ],
+              [
+                101.32498556767206,
+                36.00001678501175
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 103.92306299037925,
+        "bottom": 21.000009791256854,
+        "right": 107.3871662206555,
+        "top": 24.000011190007832,
+        "GEOJOIN": 15,
+        "ChinaAQIPoints_Updated_Name": "Chongzuo, chengnanxinqu",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/chongzuo/chengnanxinqu/",
+        "ChinaAQIPoints_Updated_file_name": "ch?ngn?n-x?nq?, chongzuo-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 22.3846289,
+        "ChinaAQIPoints_Updated_Long": 107.2866403,
+        "ChinaAQIPoints_Updated_Current AQI": 70,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                103.92306299037925,
+                22.500010490632345
+              ],
+              [
+                104.78908879794831,
+                24.000011190007832
+              ],
+              [
+                106.52114041308644,
+                24.000011190007832
+              ],
+              [
+                107.3871662206555,
+                22.500010490632345
+              ],
+              [
+                106.52114041308644,
+                21.000009791256854
+              ],
+              [
+                104.78908879794831,
+                21.000009791256854
+              ],
+              [
+                103.92306299037925,
+                22.500010490632345
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 103.92306299037925,
+        "bottom": 24.000011190007832,
+        "right": 107.3871662206555,
+        "top": 27.000012588758814,
+        "GEOJOIN": 49,
+        "ChinaAQIPoints_Updated_Name": "City EPA station, Guiyang",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/guiyang/shihuanbaozhan/",
+        "ChinaAQIPoints_Updated_file_name": "city-epa station, guiyang-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 26.5924445,
+        "ChinaAQIPoints_Updated_Long": 106.6679708,
+        "ChinaAQIPoints_Updated_Current AQI": 55,
+        "Monthly_average": 149.310344827586
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                103.92306299037925,
+                25.500011889383323
+              ],
+              [
+                104.78908879794831,
+                27.000012588758814
+              ],
+              [
+                106.52114041308644,
+                27.000012588758814
+              ],
+              [
+                107.3871662206555,
+                25.500011889383323
+              ],
+              [
+                106.52114041308644,
+                24.000011190007832
+              ],
+              [
+                104.78908879794831,
+                24.000011190007832
+              ],
+              [
+                103.92306299037925,
+                25.500011889383323
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 103.92306299037925,
+        "bottom": 27.000012588758814,
+        "right": 107.3871662206555,
+        "top": 30.000013987509792,
+        "GEOJOIN": 11,
+        "ChinaAQIPoints_Updated_Name": "Large bamboo forest, Chongqing",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/zhongqing/dazhulin",
+        "ChinaAQIPoints_Updated_file_name": "large-bamboo forest, chongqing-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 29.6145144,
+        "ChinaAQIPoints_Updated_Long": 106.4976345,
+        "ChinaAQIPoints_Updated_Current AQI": 122,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                103.92306299037925,
+                28.500013288134305
+              ],
+              [
+                104.78908879794831,
+                30.000013987509792
+              ],
+              [
+                106.52114041308644,
+                30.000013987509792
+              ],
+              [
+                107.3871662206555,
+                28.500013288134305
+              ],
+              [
+                106.52114041308644,
+                27.000012588758814
+              ],
+              [
+                104.78908879794831,
+                27.000012588758814
+              ],
+              [
+                103.92306299037925,
+                28.500013288134305
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 103.92306299037925,
+        "bottom": 30.000013987509792,
+        "right": 107.3871662206555,
+        "top": 33.00001538626077,
+        "GEOJOIN": 46,
+        "ChinaAQIPoints_Updated_Name": "No.3 water company, Mianyang",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/mianyang/sanshuichang",
+        "ChinaAQIPoints_Updated_file_name": "no.3-water company, mianyang-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 31.467347,
+        "ChinaAQIPoints_Updated_Long": 104.5575578,
+        "ChinaAQIPoints_Updated_Current AQI": 53,
+        "Monthly_average": 123.392857142857
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                103.92306299037925,
+                31.50001468688528
+              ],
+              [
+                104.78908879794831,
+                33.00001538626077
+              ],
+              [
+                106.52114041308644,
+                33.00001538626077
+              ],
+              [
+                107.3871662206555,
+                31.50001468688528
+              ],
+              [
+                106.52114041308644,
+                30.000013987509792
+              ],
+              [
+                104.78908879794831,
+                30.000013987509792
+              ],
+              [
+                103.92306299037925,
+                31.50001468688528
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 103.92306299037925,
+        "bottom": 33.00001538626077,
+        "right": 107.3871662206555,
+        "top": 36.00001678501175,
+        "GEOJOIN": 47,
+        "ChinaAQIPoints_Updated_Name": "Monitoring station, Baoji",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/baoji/jiancezhan/",
+        "ChinaAQIPoints_Updated_file_name": "monitoring-station, baoji-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 34.3430032,
+        "ChinaAQIPoints_Updated_Long": 107.103512,
+        "ChinaAQIPoints_Updated_Current AQI": 38,
+        "Monthly_average": 119.379310344828
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                103.92306299037925,
+                34.50001608563626
+              ],
+              [
+                104.78908879794831,
+                36.00001678501175
+              ],
+              [
+                106.52114041308644,
+                36.00001678501175
+              ],
+              [
+                107.3871662206555,
+                34.50001608563626
+              ],
+              [
+                106.52114041308644,
+                33.00001538626077
+              ],
+              [
+                104.78908879794831,
+                33.00001538626077
+              ],
+              [
+                103.92306299037925,
+                34.50001608563626
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 103.92306299037925,
+        "bottom": 36.00001678501175,
+        "right": 107.3871662206555,
+        "top": 39.000018183762734,
+        "GEOJOIN": 61,
+        "ChinaAQIPoints_Updated_Name": "Yinchuan",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/yinchuan/helanshandonglu",
+        "ChinaAQIPoints_Updated_file_name": "helanshan-east road, yinchuan-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 38.4607818,
+        "ChinaAQIPoints_Updated_Long": 106.1508452,
+        "ChinaAQIPoints_Updated_Current AQI": 151,
+        "Monthly_average": 153.724137931035
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                103.92306299037925,
+                37.50001748438724
+              ],
+              [
+                104.78908879794831,
+                39.000018183762734
+              ],
+              [
+                106.52114041308644,
+                39.000018183762734
+              ],
+              [
+                107.3871662206555,
+                37.50001748438724
+              ],
+              [
+                106.52114041308644,
+                36.00001678501175
+              ],
+              [
+                104.78908879794831,
+                36.00001678501175
+              ],
+              [
+                103.92306299037925,
+                37.50001748438724
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 103.92306299037925,
+        "bottom": 39.000018183762734,
+        "right": 107.3871662206555,
+        "top": 42.00001958251371,
+        "GEOJOIN": 62,
+        "ChinaAQIPoints_Updated_Name": "Wuhai",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/wuhai/zhonghaibowanxuexiao",
+        "ChinaAQIPoints_Updated_file_name": "zh?ngh?i-b? w?n xu?xi?o, wuhai-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 39.6370862,
+        "ChinaAQIPoints_Updated_Long": 106.7336925,
+        "ChinaAQIPoints_Updated_Current AQI": 78,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                103.92306299037925,
+                40.50001888313822
+              ],
+              [
+                104.78908879794831,
+                42.00001958251371
+              ],
+              [
+                106.52114041308644,
+                42.00001958251371
+              ],
+              [
+                107.3871662206555,
+                40.50001888313822
+              ],
+              [
+                106.52114041308644,
+                39.000018183762734
+              ],
+              [
+                104.78908879794831,
+                39.000018183762734
+              ],
+              [
+                103.92306299037925,
+                40.50001888313822
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 106.52114041308644,
+        "bottom": 19.500009091881367,
+        "right": 109.98524364336271,
+        "top": 22.500010490632345,
+        "GEOJOIN": 16,
+        "ChinaAQIPoints_Updated_Name": "sh? w?n, Fangchenggang",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/fangchenggang/shawan/",
+        "ChinaAQIPoints_Updated_file_name": "sh?-w?n, fangchenggang-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 21.6370176,
+        "ChinaAQIPoints_Updated_Long": 108.2738649,
+        "ChinaAQIPoints_Updated_Current AQI": 61,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                106.52114041308644,
+                21.000009791256854
+              ],
+              [
+                107.3871662206555,
+                22.500010490632345
+              ],
+              [
+                109.11921783579365,
+                22.500010490632345
+              ],
+              [
+                109.98524364336271,
+                21.000009791256854
+              ],
+              [
+                109.11921783579365,
+                19.500009091881367
+              ],
+              [
+                107.3871662206555,
+                19.500009091881367
+              ],
+              [
+                106.52114041308644,
+                21.000009791256854
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 106.52114041308644,
+        "bottom": 22.500010490632345,
+        "right": 109.98524364336271,
+        "top": 25.500011889383323,
+        "GEOJOIN": 14,
+        "ChinaAQIPoints_Updated_Name": "Blood Center, Baise",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/baise/shizhongxinxuezhan/",
+        "ChinaAQIPoints_Updated_file_name": "blood-center, baise-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 23.8955817,
+        "ChinaAQIPoints_Updated_Long": 106.635482,
+        "ChinaAQIPoints_Updated_Current AQI": 68,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                106.52114041308644,
+                24.000011190007832
+              ],
+              [
+                107.3871662206555,
+                25.500011889383323
+              ],
+              [
+                109.11921783579365,
+                25.500011889383323
+              ],
+              [
+                109.98524364336271,
+                24.000011190007832
+              ],
+              [
+                109.11921783579365,
+                22.500010490632345
+              ],
+              [
+                107.3871662206555,
+                22.500010490632345
+              ],
+              [
+                106.52114041308644,
+                24.000011190007832
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 106.52114041308644,
+        "bottom": 25.500011889383323,
+        "right": 109.98524364336271,
+        "top": 28.500013288134305,
+        "GEOJOIN": 51,
+        "ChinaAQIPoints_Updated_Name": "Zhongzhuang, Zunyi",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/zunyi/zhongzhuang",
+        "ChinaAQIPoints_Updated_file_name": "zhongzhuang,-zunyi-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 27.6741923,
+        "ChinaAQIPoints_Updated_Long": 106.956158,
+        "ChinaAQIPoints_Updated_Current AQI": 74,
+        "Monthly_average": 126.172413793103
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                106.52114041308644,
+                27.000012588758814
+              ],
+              [
+                107.3871662206555,
+                28.500013288134305
+              ],
+              [
+                109.11921783579365,
+                28.500013288134305
+              ],
+              [
+                109.98524364336271,
+                27.000012588758814
+              ],
+              [
+                109.11921783579365,
+                25.500011889383323
+              ],
+              [
+                107.3871662206555,
+                25.500011889383323
+              ],
+              [
+                106.52114041308644,
+                27.000012588758814
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 106.52114041308644,
+        "bottom": 31.50001468688528,
+        "right": 109.98524364336271,
+        "top": 34.50001608563626,
+        "GEOJOIN": 48,
+        "ChinaAQIPoints_Updated_Name": "City Monitoring Station, Hanzhong",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/hanzhong/shijiancezhan",
+        "ChinaAQIPoints_Updated_file_name": "city-monitoring station, hanzhong-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 33.067457,
+        "ChinaAQIPoints_Updated_Long": 107.0228529,
+        "ChinaAQIPoints_Updated_Current AQI": 55,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                106.52114041308644,
+                33.00001538626077
+              ],
+              [
+                107.3871662206555,
+                34.50001608563626
+              ],
+              [
+                109.11921783579365,
+                34.50001608563626
+              ],
+              [
+                109.98524364336271,
+                33.00001538626077
+              ],
+              [
+                109.11921783579365,
+                31.50001468688528
+              ],
+              [
+                107.3871662206555,
+                31.50001468688528
+              ],
+              [
+                106.52114041308644,
+                33.00001538626077
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 106.52114041308644,
+        "bottom": 34.50001608563626,
+        "right": 109.98524364336271,
+        "top": 37.50001748438724,
+        "GEOJOIN": 59,
+        "ChinaAQIPoints_Updated_Name": "Tongchuan",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/tongchuan",
+        "ChinaAQIPoints_Updated_file_name": "tongchuan-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 34.9055815,
+        "ChinaAQIPoints_Updated_Long": 108.8743368,
+        "ChinaAQIPoints_Updated_Current AQI": 68,
+        "Monthly_average": 159.965517241379
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                106.52114041308644,
+                36.00001678501175
+              ],
+              [
+                107.3871662206555,
+                37.50001748438724
+              ],
+              [
+                109.11921783579365,
+                37.50001748438724
+              ],
+              [
+                109.98524364336271,
+                36.00001678501175
+              ],
+              [
+                109.11921783579365,
+                34.50001608563626
+              ],
+              [
+                107.3871662206555,
+                34.50001608563626
+              ],
+              [
+                106.52114041308644,
+                36.00001678501175
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 106.52114041308644,
+        "bottom": 37.50001748438724,
+        "right": 109.98524364336271,
+        "top": 40.50001888313822,
+        "GEOJOIN": 80,
+        "ChinaAQIPoints_Updated_Name": "Eerduosi",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/eerduosi",
+        "ChinaAQIPoints_Updated_file_name": "eerduosi-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 39.4493786,
+        "ChinaAQIPoints_Updated_Long": 109.5137651,
+        "ChinaAQIPoints_Updated_Current AQI": 97,
+        "Monthly_average": 88.9310344827586
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                106.52114041308644,
+                39.000018183762734
+              ],
+              [
+                107.3871662206555,
+                40.50001888313822
+              ],
+              [
+                109.11921783579365,
+                40.50001888313822
+              ],
+              [
+                109.98524364336271,
+                39.000018183762734
+              ],
+              [
+                109.11921783579365,
+                37.50001748438724
+              ],
+              [
+                107.3871662206555,
+                37.50001748438724
+              ],
+              [
+                106.52114041308644,
+                39.000018183762734
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 106.52114041308644,
+        "bottom": 40.50001888313822,
+        "right": 109.98524364336271,
+        "top": 43.5000202818892,
+        "GEOJOIN": 63,
+        "ChinaAQIPoints_Updated_Name": "Bayannur",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/bayanneer/shihuanbaodalou",
+        "ChinaAQIPoints_Updated_file_name": "city-environmental building, bayannur-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 40.7486976,
+        "ChinaAQIPoints_Updated_Long": 107.3407959,
+        "ChinaAQIPoints_Updated_Current AQI": 78,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                106.52114041308644,
+                42.00001958251371
+              ],
+              [
+                107.3871662206555,
+                43.5000202818892
+              ],
+              [
+                109.11921783579365,
+                43.5000202818892
+              ],
+              [
+                109.98524364336271,
+                42.00001958251371
+              ],
+              [
+                109.11921783579365,
+                40.50001888313822
+              ],
+              [
+                107.3871662206555,
+                40.50001888313822
+              ],
+              [
+                106.52114041308644,
+                42.00001958251371
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 109.11921783579365,
+        "bottom": 18.000008392505876,
+        "right": 112.58332106606991,
+        "top": 21.000009791256854,
+        "GEOJOIN": 19,
+        "ChinaAQIPoints_Updated_Name": "Hainan Normal University, Haikou",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/haikou/hainanshifandaxue",
+        "ChinaAQIPoints_Updated_file_name": "hainan-normal university, haikou-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 19.9979085,
+        "ChinaAQIPoints_Updated_Long": 110.3298651,
+        "ChinaAQIPoints_Updated_Current AQI": 91,
+        "Monthly_average": 95.8965517241379
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                109.11921783579365,
+                19.500009091881367
+              ],
+              [
+                109.98524364336271,
+                21.000009791256854
+              ],
+              [
+                111.71729525850085,
+                21.000009791256854
+              ],
+              [
+                112.58332106606991,
+                19.500009091881367
+              ],
+              [
+                111.71729525850085,
+                18.000008392505876
+              ],
+              [
+                109.98524364336271,
+                18.000008392505876
+              ],
+              [
+                109.11921783579365,
+                19.500009091881367
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 109.11921783579365,
+        "bottom": 21.000009791256854,
+        "right": 112.58332106606991,
+        "top": 24.000011190007832,
+        "GEOJOIN": 21,
+        "ChinaAQIPoints_Updated_Name": "Petrochemical No. 7 elementaty school, Maoming",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/guangdong/maoming/maoshihuaqixiao/",
+        "ChinaAQIPoints_Updated_file_name": "petrochemical-no. 7 elementaty school, maoming",
+        "ChinaAQIPoints_Updated_Lat": 21.6526541,
+        "ChinaAQIPoints_Updated_Long": 110.8456956,
+        "ChinaAQIPoints_Updated_Current AQI": 82,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                109.11921783579365,
+                22.500010490632345
+              ],
+              [
+                109.98524364336271,
+                24.000011190007832
+              ],
+              [
+                111.71729525850085,
+                24.000011190007832
+              ],
+              [
+                112.58332106606991,
+                22.500010490632345
+              ],
+              [
+                111.71729525850085,
+                21.000009791256854
+              ],
+              [
+                109.98524364336271,
+                21.000009791256854
+              ],
+              [
+                109.11921783579365,
+                22.500010490632345
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 109.11921783579365,
+        "bottom": 24.000011190007832,
+        "right": 112.58332106606991,
+        "top": 27.000012588758814,
+        "GEOJOIN": 44,
+        "ChinaAQIPoints_Updated_Name": "guilin",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/guilin",
+        "ChinaAQIPoints_Updated_file_name": "guilin-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 25.2933631,
+        "ChinaAQIPoints_Updated_Long": 110.2928294,
+        "ChinaAQIPoints_Updated_Current AQI": 158,
+        "Monthly_average": 151.137931034483
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                109.11921783579365,
+                25.500011889383323
+              ],
+              [
+                109.98524364336271,
+                27.000012588758814
+              ],
+              [
+                111.71729525850085,
+                27.000012588758814
+              ],
+              [
+                112.58332106606991,
+                25.500011889383323
+              ],
+              [
+                111.71729525850085,
+                24.000011190007832
+              ],
+              [
+                109.98524364336271,
+                24.000011190007832
+              ],
+              [
+                109.11921783579365,
+                25.500011889383323
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 109.11921783579365,
+        "bottom": 27.000012588758814,
+        "right": 112.58332106606991,
+        "top": 30.000013987509792,
+        "GEOJOIN": 52,
+        "ChinaAQIPoints_Updated_Name": "Huaihua",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/huaihua",
+        "ChinaAQIPoints_Updated_file_name": "huaihua-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 27.5381643,
+        "ChinaAQIPoints_Updated_Long": 109.8200085,
+        "ChinaAQIPoints_Updated_Current AQI": 97,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                109.11921783579365,
+                28.500013288134305
+              ],
+              [
+                109.98524364336271,
+                30.000013987509792
+              ],
+              [
+                111.71729525850085,
+                30.000013987509792
+              ],
+              [
+                112.58332106606991,
+                28.500013288134305
+              ],
+              [
+                111.71729525850085,
+                27.000012588758814
+              ],
+              [
+                109.98524364336271,
+                27.000012588758814
+              ],
+              [
+                109.11921783579365,
+                28.500013288134305
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 109.11921783579365,
+        "bottom": 30.000013987509792,
+        "right": 112.58332106606991,
+        "top": 33.00001538626077,
+        "GEOJOIN": 54,
+        "ChinaAQIPoints_Updated_Name": "Jingmen",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/hubei/jingmen/duodao",
+        "ChinaAQIPoints_Updated_file_name": "duodao,-jingmen-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 31.033809,
+        "ChinaAQIPoints_Updated_Long": 112.1330338,
+        "ChinaAQIPoints_Updated_Current AQI": 95,
+        "Monthly_average": 163.448275862069
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                109.11921783579365,
+                31.50001468688528
+              ],
+              [
+                109.98524364336271,
+                33.00001538626077
+              ],
+              [
+                111.71729525850085,
+                33.00001538626077
+              ],
+              [
+                112.58332106606991,
+                31.50001468688528
+              ],
+              [
+                111.71729525850085,
+                30.000013987509792
+              ],
+              [
+                109.98524364336271,
+                30.000013987509792
+              ],
+              [
+                109.11921783579365,
+                31.50001468688528
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 109.11921783579365,
+        "bottom": 33.00001538626077,
+        "right": 112.58332106606991,
+        "top": 36.00001678501175,
+        "GEOJOIN": 57,
+        "ChinaAQIPoints_Updated_Name": "Luoyang",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/luoyang/shiweidangxiao",
+        "ChinaAQIPoints_Updated_file_name": "city-committee communist party school, luoyang-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 34.619409,
+        "ChinaAQIPoints_Updated_Long": 112.3162199,
+        "ChinaAQIPoints_Updated_Current AQI": 63,
+        "Monthly_average": 118.689655172414
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                109.11921783579365,
+                34.50001608563626
+              ],
+              [
+                109.98524364336271,
+                36.00001678501175
+              ],
+              [
+                111.71729525850085,
+                36.00001678501175
+              ],
+              [
+                112.58332106606991,
+                34.50001608563626
+              ],
+              [
+                111.71729525850085,
+                33.00001538626077
+              ],
+              [
+                109.98524364336271,
+                33.00001538626077
+              ],
+              [
+                109.11921783579365,
+                34.50001608563626
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 109.11921783579365,
+        "bottom": 36.00001678501175,
+        "right": 112.58332106606991,
+        "top": 39.000018183762734,
+        "GEOJOIN": 81,
+        "ChinaAQIPoints_Updated_Name": "Yulin",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/yulin/shiyanzhongxue",
+        "ChinaAQIPoints_Updated_file_name": "experimental-middle school, yulin-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 38.2425555,
+        "ChinaAQIPoints_Updated_Long": 109.8202565,
+        "ChinaAQIPoints_Updated_Current AQI": 95,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                109.11921783579365,
+                37.50001748438724
+              ],
+              [
+                109.98524364336271,
+                39.000018183762734
+              ],
+              [
+                111.71729525850085,
+                39.000018183762734
+              ],
+              [
+                112.58332106606991,
+                37.50001748438724
+              ],
+              [
+                111.71729525850085,
+                36.00001678501175
+              ],
+              [
+                109.98524364336271,
+                36.00001678501175
+              ],
+              [
+                109.11921783579365,
+                37.50001748438724
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 109.11921783579365,
+        "bottom": 39.000018183762734,
+        "right": 112.58332106606991,
+        "top": 42.00001958251371,
+        "GEOJOIN": 64,
+        "ChinaAQIPoints_Updated_Name": "Yancheng",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/jiangsu/yancheng/kaifaquguanweihui",
+        "ChinaAQIPoints_Updated_file_name": "bda-management committe, yancheng-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 33.416052,
+        "ChinaAQIPoints_Updated_Long": 120.1909016,
+        "ChinaAQIPoints_Updated_Current AQI": 44,
+        "Monthly_average": 110.310344827586
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                109.11921783579365,
+                40.50001888313822
+              ],
+              [
+                109.98524364336271,
+                42.00001958251371
+              ],
+              [
+                111.71729525850085,
+                42.00001958251371
+              ],
+              [
+                112.58332106606991,
+                40.50001888313822
+              ],
+              [
+                111.71729525850085,
+                39.000018183762734
+              ],
+              [
+                109.98524364336271,
+                39.000018183762734
+              ],
+              [
+                109.11921783579365,
+                40.50001888313822
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 111.71729525850085,
+        "bottom": 19.500009091881367,
+        "right": 115.1813984887771,
+        "top": 22.500010490632345,
+        "GEOJOIN": 23,
+        "ChinaAQIPoints_Updated_Name": "yangjiang-air-quality",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/guangdong/zhuhai/doumen",
+        "ChinaAQIPoints_Updated_file_name": "d?um?n,-zhuhai-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 22.2419594,
+        "ChinaAQIPoints_Updated_Long": 113.0725821,
+        "ChinaAQIPoints_Updated_Current AQI": 68,
+        "Monthly_average": 137.413793103448
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                111.71729525850085,
+                21.000009791256854
+              ],
+              [
+                112.58332106606991,
+                22.500010490632345
+              ],
+              [
+                114.31537268120805,
+                22.500010490632345
+              ],
+              [
+                115.1813984887771,
+                21.000009791256854
+              ],
+              [
+                114.31537268120805,
+                19.500009091881367
+              ],
+              [
+                112.58332106606991,
+                19.500009091881367
+              ],
+              [
+                111.71729525850085,
+                21.000009791256854
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 111.71729525850085,
+        "bottom": 22.500010490632345,
+        "right": 115.1813984887771,
+        "top": 25.500011889383323,
+        "GEOJOIN": 24,
+        "ChinaAQIPoints_Updated_Name": "City Monitoring Station, Guangzhou",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/guangdong/guangzhou/shijiancezhan",
+        "ChinaAQIPoints_Updated_file_name": "city-monitoring station, guangzhou-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 23.148109,
+        "ChinaAQIPoints_Updated_Long": 113.2525688,
+        "ChinaAQIPoints_Updated_Current AQI": 70,
+        "Monthly_average": 126.413793103448
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                111.71729525850085,
+                24.000011190007832
+              ],
+              [
+                112.58332106606991,
+                25.500011889383323
+              ],
+              [
+                114.31537268120805,
+                25.500011889383323
+              ],
+              [
+                115.1813984887771,
+                24.000011190007832
+              ],
+              [
+                114.31537268120805,
+                22.500010490632345
+              ],
+              [
+                112.58332106606991,
+                22.500010490632345
+              ],
+              [
+                111.71729525850085,
+                24.000011190007832
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 111.71729525850085,
+        "bottom": 25.500011889383323,
+        "right": 115.1813984887771,
+        "top": 28.500013288134305,
+        "GEOJOIN": 43,
+        "ChinaAQIPoints_Updated_Name": "Changsha",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/changsha",
+        "ChinaAQIPoints_Updated_file_name": "changsha-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 28.2210009,
+        "ChinaAQIPoints_Updated_Long": 112.912744,
+        "ChinaAQIPoints_Updated_Current AQI": 195,
+        "Monthly_average": 160.620689655172
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                111.71729525850085,
+                27.000012588758814
+              ],
+              [
+                112.58332106606991,
+                28.500013288134305
+              ],
+              [
+                114.31537268120805,
+                28.500013288134305
+              ],
+              [
+                115.1813984887771,
+                27.000012588758814
+              ],
+              [
+                114.31537268120805,
+                25.500011889383323
+              ],
+              [
+                112.58332106606991,
+                25.500011889383323
+              ],
+              [
+                111.71729525850085,
+                27.000012588758814
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 111.71729525850085,
+        "bottom": 28.500013288134305,
+        "right": 115.1813984887771,
+        "top": 31.50001468688528,
+        "GEOJOIN": 53,
+        "ChinaAQIPoints_Updated_Name": "Xianning",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/hubei/xianning/changjiangchanyeyuan",
+        "ChinaAQIPoints_Updated_file_name": "yangtze-river industrial park , xianning-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 29.8292903,
+        "ChinaAQIPoints_Updated_Long": 114.2418446,
+        "ChinaAQIPoints_Updated_Current AQI": 163,
+        "Monthly_average": 138.758620689655
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                111.71729525850085,
+                30.000013987509792
+              ],
+              [
+                112.58332106606991,
+                31.50001468688528
+              ],
+              [
+                114.31537268120805,
+                31.50001468688528
+              ],
+              [
+                115.1813984887771,
+                30.000013987509792
+              ],
+              [
+                114.31537268120805,
+                28.500013288134305
+              ],
+              [
+                112.58332106606991,
+                28.500013288134305
+              ],
+              [
+                111.71729525850085,
+                30.000013987509792
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 111.71729525850085,
+        "bottom": 31.50001468688528,
+        "right": 115.1813984887771,
+        "top": 34.50001608563626,
+        "GEOJOIN": 55,
+        "ChinaAQIPoints_Updated_Name": "Pingdingshan",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/pingdingshan/xinhualvguan",
+        "ChinaAQIPoints_Updated_file_name": "xinhua-hotel, pingdingshan-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 33.7380989,
+        "ChinaAQIPoints_Updated_Long": 113.1452189,
+        "ChinaAQIPoints_Updated_Current AQI": 74,
+        "Monthly_average": 153.724137931035
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                111.71729525850085,
+                33.00001538626077
+              ],
+              [
+                112.58332106606991,
+                34.50001608563626
+              ],
+              [
+                114.31537268120805,
+                34.50001608563626
+              ],
+              [
+                115.1813984887771,
+                33.00001538626077
+              ],
+              [
+                114.31537268120805,
+                31.50001468688528
+              ],
+              [
+                112.58332106606991,
+                31.50001468688528
+              ],
+              [
+                111.71729525850085,
+                33.00001538626077
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 111.71729525850085,
+        "bottom": 34.50001608563626,
+        "right": 115.1813984887771,
+        "top": 37.50001748438724,
+        "GEOJOIN": 58,
+        "ChinaAQIPoints_Updated_Name": "Kaifeng",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/kaifeng",
+        "ChinaAQIPoints_Updated_file_name": "kaifeng-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 34.7847051,
+        "ChinaAQIPoints_Updated_Long": 114.2720571,
+        "ChinaAQIPoints_Updated_Current AQI": 50,
+        "Monthly_average": 148.413793103448
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                111.71729525850085,
+                36.00001678501175
+              ],
+              [
+                112.58332106606991,
+                37.50001748438724
+              ],
+              [
+                114.31537268120805,
+                37.50001748438724
+              ],
+              [
+                115.1813984887771,
+                36.00001678501175
+              ],
+              [
+                114.31537268120805,
+                34.50001608563626
+              ],
+              [
+                112.58332106606991,
+                34.50001608563626
+              ],
+              [
+                111.71729525850085,
+                36.00001678501175
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 111.71729525850085,
+        "bottom": 37.50001748438724,
+        "right": 115.1813984887771,
+        "top": 40.50001888313822,
+        "GEOJOIN": 82,
+        "ChinaAQIPoints_Updated_Name": "Taiyuan",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/taiyuan/taoyuan",
+        "ChinaAQIPoints_Updated_file_name": "taoyuan,-taiyuan-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 37.8919742,
+        "ChinaAQIPoints_Updated_Long": 112.5263941,
+        "ChinaAQIPoints_Updated_Current AQI": 158,
+        "Monthly_average": 128.758620689655
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                111.71729525850085,
+                39.000018183762734
+              ],
+              [
+                112.58332106606991,
+                40.50001888313822
+              ],
+              [
+                114.31537268120805,
+                40.50001888313822
+              ],
+              [
+                115.1813984887771,
+                39.000018183762734
+              ],
+              [
+                114.31537268120805,
+                37.50001748438724
+              ],
+              [
+                112.58332106606991,
+                37.50001748438724
+              ],
+              [
+                111.71729525850085,
+                39.000018183762734
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 111.71729525850085,
+        "bottom": 40.50001888313822,
+        "right": 115.1813984887771,
+        "top": 43.5000202818892,
+        "GEOJOIN": 83,
+        "ChinaAQIPoints_Updated_Name": "Ulanqab",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/wulanchabu/jiningxinqu",
+        "ChinaAQIPoints_Updated_file_name": "jining-district, ulanqab-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 40.9838853,
+        "ChinaAQIPoints_Updated_Long": 113.0811798,
+        "ChinaAQIPoints_Updated_Current AQI": 57,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                111.71729525850085,
+                42.00001958251371
+              ],
+              [
+                112.58332106606991,
+                43.5000202818892
+              ],
+              [
+                114.31537268120805,
+                43.5000202818892
+              ],
+              [
+                115.1813984887771,
+                42.00001958251371
+              ],
+              [
+                114.31537268120805,
+                40.50001888313822
+              ],
+              [
+                112.58332106606991,
+                40.50001888313822
+              ],
+              [
+                111.71729525850085,
+                42.00001958251371
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 114.31537268120805,
+        "bottom": 21.000009791256854,
+        "right": 117.7794759114843,
+        "top": 24.000011190007832,
+        "GEOJOIN": 28,
+        "ChinaAQIPoints_Updated_Name": "Shanwei",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/guangdong/shanwei",
+        "ChinaAQIPoints_Updated_file_name": "shanwei-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 22.7790713,
+        "ChinaAQIPoints_Updated_Long": 115.3410807,
+        "ChinaAQIPoints_Updated_Current AQI": 59,
+        "Monthly_average": 126.206896551724
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                114.31537268120805,
+                22.500010490632345
+              ],
+              [
+                115.1813984887771,
+                24.000011190007832
+              ],
+              [
+                116.91345010391524,
+                24.000011190007832
+              ],
+              [
+                117.7794759114843,
+                22.500010490632345
+              ],
+              [
+                116.91345010391524,
+                21.000009791256854
+              ],
+              [
+                115.1813984887771,
+                21.000009791256854
+              ],
+              [
+                114.31537268120805,
+                22.500010490632345
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 114.31537268120805,
+        "bottom": 24.000011190007832,
+        "right": 117.7794759114843,
+        "top": 27.000012588758814,
+        "GEOJOIN": 42,
+        "ChinaAQIPoints_Updated_Name": "hu? ji?n xi?ch?ng, Ganzhou",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/ganzhou/huajianxiecheng",
+        "ChinaAQIPoints_Updated_file_name": "hu?-ji?n xi?ch?ng, ganzhou-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 25.8369634,
+        "ChinaAQIPoints_Updated_Long": 114.8577655,
+        "ChinaAQIPoints_Updated_Current AQI": 80,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                114.31537268120805,
+                25.500011889383323
+              ],
+              [
+                115.1813984887771,
+                27.000012588758814
+              ],
+              [
+                116.91345010391524,
+                27.000012588758814
+              ],
+              [
+                117.7794759114843,
+                25.500011889383323
+              ],
+              [
+                116.91345010391524,
+                24.000011190007832
+              ],
+              [
+                115.1813984887771,
+                24.000011190007832
+              ],
+              [
+                114.31537268120805,
+                25.500011889383323
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 114.31537268120805,
+        "bottom": 27.000012588758814,
+        "right": 117.7794759114843,
+        "top": 30.000013987509792,
+        "GEOJOIN": 41,
+        "ChinaAQIPoints_Updated_Name": "Nanchang",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/nanchang",
+        "ChinaAQIPoints_Updated_file_name": "nanchang-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 28.6799962,
+        "ChinaAQIPoints_Updated_Long": 115.8835079,
+        "ChinaAQIPoints_Updated_Current AQI": 119,
+        "Monthly_average": 141.965517241379
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                114.31537268120805,
+                28.500013288134305
+              ],
+              [
+                115.1813984887771,
+                30.000013987509792
+              ],
+              [
+                116.91345010391524,
+                30.000013987509792
+              ],
+              [
+                117.7794759114843,
+                28.500013288134305
+              ],
+              [
+                116.91345010391524,
+                27.000012588758814
+              ],
+              [
+                115.1813984887771,
+                27.000012588758814
+              ],
+              [
+                114.31537268120805,
+                28.500013288134305
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 114.31537268120805,
+        "bottom": 30.000013987509792,
+        "right": 117.7794759114843,
+        "top": 33.00001538626077,
+        "GEOJOIN": 56,
+        "ChinaAQIPoints_Updated_Name": "Hefei",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/hefei",
+        "ChinaAQIPoints_Updated_file_name": "hefei-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 31.8557096,
+        "ChinaAQIPoints_Updated_Long": 117.1211107,
+        "ChinaAQIPoints_Updated_Current AQI": 42,
+        "Monthly_average": 154.620689655172
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                114.31537268120805,
+                31.50001468688528
+              ],
+              [
+                115.1813984887771,
+                33.00001538626077
+              ],
+              [
+                116.91345010391524,
+                33.00001538626077
+              ],
+              [
+                117.7794759114843,
+                31.50001468688528
+              ],
+              [
+                116.91345010391524,
+                30.000013987509792
+              ],
+              [
+                115.1813984887771,
+                30.000013987509792
+              ],
+              [
+                114.31537268120805,
+                31.50001468688528
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 114.31537268120805,
+        "bottom": 33.00001538626077,
+        "right": 117.7794759114843,
+        "top": 36.00001678501175,
+        "GEOJOIN": 69,
+        "ChinaAQIPoints_Updated_Name": "Xuzhou",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/xuzhou/",
+        "ChinaAQIPoints_Updated_file_name": "xuzhou-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 34.2707987,
+        "ChinaAQIPoints_Updated_Long": 117.1633155,
+        "ChinaAQIPoints_Updated_Current AQI": 57,
+        "Monthly_average": 153.896551724138
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                114.31537268120805,
+                34.50001608563626
+              ],
+              [
+                115.1813984887771,
+                36.00001678501175
+              ],
+              [
+                116.91345010391524,
+                36.00001678501175
+              ],
+              [
+                117.7794759114843,
+                34.50001608563626
+              ],
+              [
+                116.91345010391524,
+                33.00001538626077
+              ],
+              [
+                115.1813984887771,
+                33.00001538626077
+              ],
+              [
+                114.31537268120805,
+                34.50001608563626
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 114.31537268120805,
+        "bottom": 36.00001678501175,
+        "right": 117.7794759114843,
+        "top": 39.000018183762734,
+        "GEOJOIN": 70,
+        "ChinaAQIPoints_Updated_Name": "Hengshui",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/hengshui",
+        "ChinaAQIPoints_Updated_file_name": "hengshui-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 37.7221082,
+        "ChinaAQIPoints_Updated_Long": 115.584354,
+        "ChinaAQIPoints_Updated_Current AQI": 65,
+        "Monthly_average": 200.379310344828
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                114.31537268120805,
+                37.50001748438724
+              ],
+              [
+                115.1813984887771,
+                39.000018183762734
+              ],
+              [
+                116.91345010391524,
+                39.000018183762734
+              ],
+              [
+                117.7794759114843,
+                37.50001748438724
+              ],
+              [
+                116.91345010391524,
+                36.00001678501175
+              ],
+              [
+                115.1813984887771,
+                36.00001678501175
+              ],
+              [
+                114.31537268120805,
+                37.50001748438724
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 114.31537268120805,
+        "bottom": 39.000018183762734,
+        "right": 117.7794759114843,
+        "top": 42.00001958251371,
+        "GEOJOIN": 50,
+        "ChinaAQIPoints_Updated_Name": "Temple of Heaven, Dongcheng",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/beijing/dongchengtiantan/",
+        "ChinaAQIPoints_Updated_file_name": "temple-of heaven, dongcheng-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 39.8821844,
+        "ChinaAQIPoints_Updated_Long": 116.4040253,
+        "ChinaAQIPoints_Updated_Current AQI": 63,
+        "Monthly_average": 115.51724137931
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                114.31537268120805,
+                40.50001888313822
+              ],
+              [
+                115.1813984887771,
+                42.00001958251371
+              ],
+              [
+                116.91345010391524,
+                42.00001958251371
+              ],
+              [
+                117.7794759114843,
+                40.50001888313822
+              ],
+              [
+                116.91345010391524,
+                39.000018183762734
+              ],
+              [
+                115.1813984887771,
+                39.000018183762734
+              ],
+              [
+                114.31537268120805,
+                40.50001888313822
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 114.31537268120805,
+        "bottom": 42.00001958251371,
+        "right": 117.7794759114843,
+        "top": 45.00002098126468,
+        "GEOJOIN": 73,
+        "ChinaAQIPoints_Updated_Name": "Xilingol",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/xilinguolemeng/shizhengfu",
+        "ChinaAQIPoints_Updated_file_name": "city-government, xilin gol meng-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 43.9176928,
+        "ChinaAQIPoints_Updated_Long": 115.9583352,
+        "ChinaAQIPoints_Updated_Current AQI": 25,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                114.31537268120805,
+                43.5000202818892
+              ],
+              [
+                115.1813984887771,
+                45.00002098126468
+              ],
+              [
+                116.91345010391524,
+                45.00002098126468
+              ],
+              [
+                117.7794759114843,
+                43.5000202818892
+              ],
+              [
+                116.91345010391524,
+                42.00001958251371
+              ],
+              [
+                115.1813984887771,
+                42.00001958251371
+              ],
+              [
+                114.31537268120805,
+                43.5000202818892
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 116.91345010391524,
+        "bottom": 22.500010490632345,
+        "right": 120.3775533341915,
+        "top": 25.500011889383323,
+        "GEOJOIN": 30,
+        "ChinaAQIPoints_Updated_Name": "Xiamen",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/xiamen",
+        "ChinaAQIPoints_Updated_file_name": "xiamen-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 24.4793314,
+        "ChinaAQIPoints_Updated_Long": 118.0266344,
+        "ChinaAQIPoints_Updated_Current AQI": 34,
+        "Monthly_average": 121.413793103448
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                116.91345010391524,
+                24.000011190007832
+              ],
+              [
+                117.7794759114843,
+                25.500011889383323
+              ],
+              [
+                119.51152752662244,
+                25.500011889383323
+              ],
+              [
+                120.3775533341915,
+                24.000011190007832
+              ],
+              [
+                119.51152752662244,
+                22.500010490632345
+              ],
+              [
+                117.7794759114843,
+                22.500010490632345
+              ],
+              [
+                116.91345010391524,
+                24.000011190007832
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 116.91345010391524,
+        "bottom": 25.500011889383323,
+        "right": 120.3775533341915,
+        "top": 28.500013288134305,
+        "GEOJOIN": 36,
+        "ChinaAQIPoints_Updated_Name": "Wusi North Road, Fuzhou",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/fuzhou/wusibeilu/",
+        "ChinaAQIPoints_Updated_file_name": "wusi-north road, fuzhou-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 26.0882427,
+        "ChinaAQIPoints_Updated_Long": 119.300278,
+        "ChinaAQIPoints_Updated_Current AQI": 42,
+        "Monthly_average": 107.464285714286
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                116.91345010391524,
+                27.000012588758814
+              ],
+              [
+                117.7794759114843,
+                28.500013288134305
+              ],
+              [
+                119.51152752662244,
+                28.500013288134305
+              ],
+              [
+                120.3775533341915,
+                27.000012588758814
+              ],
+              [
+                119.51152752662244,
+                25.500011889383323
+              ],
+              [
+                117.7794759114843,
+                25.500011889383323
+              ],
+              [
+                116.91345010391524,
+                27.000012588758814
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 116.91345010391524,
+        "bottom": 28.500013288134305,
+        "right": 120.3775533341915,
+        "top": 31.50001468688528,
+        "GEOJOIN": 40,
+        "ChinaAQIPoints_Updated_Name": "Wang Gang High School, Jingdezhen",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/jingdezhen/wanggangzhongxue",
+        "ChinaAQIPoints_Updated_file_name": "wang-gang high school, jingdezhen-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 29.401965,
+        "ChinaAQIPoints_Updated_Long": 117.3094892,
+        "ChinaAQIPoints_Updated_Current AQI": 61,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                116.91345010391524,
+                30.000013987509792
+              ],
+              [
+                117.7794759114843,
+                31.50001468688528
+              ],
+              [
+                119.51152752662244,
+                31.50001468688528
+              ],
+              [
+                120.3775533341915,
+                30.000013987509792
+              ],
+              [
+                119.51152752662244,
+                28.500013288134305
+              ],
+              [
+                117.7794759114843,
+                28.500013288134305
+              ],
+              [
+                116.91345010391524,
+                30.000013987509792
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 116.91345010391524,
+        "bottom": 31.50001468688528,
+        "right": 120.3775533341915,
+        "top": 34.50001608563626,
+        "GEOJOIN": 65,
+        "ChinaAQIPoints_Updated_Name": "Nanjing",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/jiangsu/nanjing/shanxilu",
+        "ChinaAQIPoints_Updated_file_name": "shanxi-road , nanjing-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 32.0994222,
+        "ChinaAQIPoints_Updated_Long": 118.4074199,
+        "ChinaAQIPoints_Updated_Current AQI": 38,
+        "Monthly_average": 132.620689655172
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                116.91345010391524,
+                33.00001538626077
+              ],
+              [
+                117.7794759114843,
+                34.50001608563626
+              ],
+              [
+                119.51152752662244,
+                34.50001608563626
+              ],
+              [
+                120.3775533341915,
+                33.00001538626077
+              ],
+              [
+                119.51152752662244,
+                31.50001468688528
+              ],
+              [
+                117.7794759114843,
+                31.50001468688528
+              ],
+              [
+                116.91345010391524,
+                33.00001538626077
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 116.91345010391524,
+        "bottom": 34.50001608563626,
+        "right": 120.3775533341915,
+        "top": 37.50001748438724,
+        "GEOJOIN": 68,
+        "ChinaAQIPoints_Updated_Name": "\nJinan",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/shandong/jinan/shijiancezhan",
+        "ChinaAQIPoints_Updated_file_name": "city-monitoring station, jinan-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 36.6686666,
+        "ChinaAQIPoints_Updated_Long": 117.1881973,
+        "ChinaAQIPoints_Updated_Current AQI": 57,
+        "Monthly_average": 164.827586206897
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                116.91345010391524,
+                36.00001678501175
+              ],
+              [
+                117.7794759114843,
+                37.50001748438724
+              ],
+              [
+                119.51152752662244,
+                37.50001748438724
+              ],
+              [
+                120.3775533341915,
+                36.00001678501175
+              ],
+              [
+                119.51152752662244,
+                34.50001608563626
+              ],
+              [
+                117.7794759114843,
+                34.50001608563626
+              ],
+              [
+                116.91345010391524,
+                36.00001678501175
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 116.91345010391524,
+        "bottom": 37.50001748438724,
+        "right": 120.3775533341915,
+        "top": 40.50001888313822,
+        "GEOJOIN": 71,
+        "ChinaAQIPoints_Updated_Name": "Tianjin",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/tianjin",
+        "ChinaAQIPoints_Updated_file_name": "tianjin-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 39.1035977,
+        "ChinaAQIPoints_Updated_Long": 117.243952,
+        "ChinaAQIPoints_Updated_Current AQI": 104,
+        "Monthly_average": 174.655172413793
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                116.91345010391524,
+                39.000018183762734
+              ],
+              [
+                117.7794759114843,
+                40.50001888313822
+              ],
+              [
+                119.51152752662244,
+                40.50001888313822
+              ],
+              [
+                120.3775533341915,
+                39.000018183762734
+              ],
+              [
+                119.51152752662244,
+                37.50001748438724
+              ],
+              [
+                117.7794759114843,
+                37.50001748438724
+              ],
+              [
+                116.91345010391524,
+                39.000018183762734
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 116.91345010391524,
+        "bottom": 40.50001888313822,
+        "right": 120.3775533341915,
+        "top": 43.5000202818892,
+        "GEOJOIN": 72,
+        "ChinaAQIPoints_Updated_Name": "Chifeng",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/chifeng",
+        "ChinaAQIPoints_Updated_file_name": "chifeng-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 42.2733559,
+        "ChinaAQIPoints_Updated_Long": 118.6677166,
+        "ChinaAQIPoints_Updated_Current AQI": 34,
+        "Monthly_average": 149.965517241379
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                116.91345010391524,
+                42.00001958251371
+              ],
+              [
+                117.7794759114843,
+                43.5000202818892
+              ],
+              [
+                119.51152752662244,
+                43.5000202818892
+              ],
+              [
+                120.3775533341915,
+                42.00001958251371
+              ],
+              [
+                119.51152752662244,
+                40.50001888313822
+              ],
+              [
+                117.7794759114843,
+                40.50001888313822
+              ],
+              [
+                116.91345010391524,
+                42.00001958251371
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 119.51152752662244,
+        "bottom": 21.000009791256854,
+        "right": 122.97563075689871,
+        "top": 24.000011190007832,
+        "GEOJOIN": 32,
+        "ChinaAQIPoints_Updated_Name": "Qianzhen",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/taiwan/cianjhen",
+        "ChinaAQIPoints_Updated_file_name": "qianzhen-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 22.5943831,
+        "ChinaAQIPoints_Updated_Long": 120.2989621,
+        "ChinaAQIPoints_Updated_Current AQI": 78,
+        "Monthly_average": 134.0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                119.51152752662244,
+                22.500010490632345
+              ],
+              [
+                120.3775533341915,
+                24.000011190007832
+              ],
+              [
+                122.10960494932965,
+                24.000011190007832
+              ],
+              [
+                122.97563075689871,
+                22.500010490632345
+              ],
+              [
+                122.10960494932965,
+                21.000009791256854
+              ],
+              [
+                120.3775533341915,
+                21.000009791256854
+              ],
+              [
+                119.51152752662244,
+                22.500010490632345
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 119.51152752662244,
+        "bottom": 24.000011190007832,
+        "right": 122.97563075689871,
+        "top": 27.000012588758814,
+        "GEOJOIN": 34,
+        "ChinaAQIPoints_Updated_Name": "Guting",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/taiwan/gutin/",
+        "ChinaAQIPoints_Updated_file_name": "guting-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 25.0235561,
+        "ChinaAQIPoints_Updated_Long": 121.5378012,
+        "ChinaAQIPoints_Updated_Current AQI": 34,
+        "Monthly_average": 74.3103448275862
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                119.51152752662244,
+                25.500011889383323
+              ],
+              [
+                120.3775533341915,
+                27.000012588758814
+              ],
+              [
+                122.10960494932965,
+                27.000012588758814
+              ],
+              [
+                122.97563075689871,
+                25.500011889383323
+              ],
+              [
+                122.10960494932965,
+                24.000011190007832
+              ],
+              [
+                120.3775533341915,
+                24.000011190007832
+              ],
+              [
+                119.51152752662244,
+                25.500011889383323
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 119.51152752662244,
+        "bottom": 27.000012588758814,
+        "right": 122.97563075689871,
+        "top": 30.000013987509792,
+        "GEOJOIN": 37,
+        "ChinaAQIPoints_Updated_Name": "City Station, Wenzhou",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/zhejiang/wenzhoushi/shizhan",
+        "ChinaAQIPoints_Updated_file_name": "city-station, wenzhou-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 28.0042901,
+        "ChinaAQIPoints_Updated_Long": 120.6810528,
+        "ChinaAQIPoints_Updated_Current AQI": 13,
+        "Monthly_average": 134.0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                119.51152752662244,
+                28.500013288134305
+              ],
+              [
+                120.3775533341915,
+                30.000013987509792
+              ],
+              [
+                122.10960494932965,
+                30.000013987509792
+              ],
+              [
+                122.97563075689871,
+                28.500013288134305
+              ],
+              [
+                122.10960494932965,
+                27.000012588758814
+              ],
+              [
+                120.3775533341915,
+                27.000012588758814
+              ],
+              [
+                119.51152752662244,
+                28.500013288134305
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 119.51152752662244,
+        "bottom": 30.000013987509792,
+        "right": 122.97563075689871,
+        "top": 33.00001538626077,
+        "GEOJOIN": 39,
+        "ChinaAQIPoints_Updated_Name": "Pudong Monitoring Station",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/shanghai/pudongjiancezhan",
+        "ChinaAQIPoints_Updated_file_name": "pudong-monitoring station-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 31.216008,
+        "ChinaAQIPoints_Updated_Long": 121.5446047,
+        "ChinaAQIPoints_Updated_Current AQI": 76,
+        "Monthly_average": 132.241379310345
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                119.51152752662244,
+                31.50001468688528
+              ],
+              [
+                120.3775533341915,
+                33.00001538626077
+              ],
+              [
+                122.10960494932965,
+                33.00001538626077
+              ],
+              [
+                122.97563075689871,
+                31.50001468688528
+              ],
+              [
+                122.10960494932965,
+                30.000013987509792
+              ],
+              [
+                120.3775533341915,
+                30.000013987509792
+              ],
+              [
+                119.51152752662244,
+                31.50001468688528
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 119.51152752662244,
+        "bottom": 33.00001538626077,
+        "right": 122.97563075689871,
+        "top": 36.00001678501175,
+        "GEOJOIN": 64,
+        "ChinaAQIPoints_Updated_Name": "Yancheng",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/jiangsu/yancheng/kaifaquguanweihui",
+        "ChinaAQIPoints_Updated_file_name": "bda-management committe, yancheng-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 33.416052,
+        "ChinaAQIPoints_Updated_Long": 120.1909016,
+        "ChinaAQIPoints_Updated_Current AQI": 44,
+        "Monthly_average": 110.310344827586
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                119.51152752662244,
+                34.50001608563626
+              ],
+              [
+                120.3775533341915,
+                36.00001678501175
+              ],
+              [
+                122.10960494932965,
+                36.00001678501175
+              ],
+              [
+                122.97563075689871,
+                34.50001608563626
+              ],
+              [
+                122.10960494932965,
+                33.00001538626077
+              ],
+              [
+                120.3775533341915,
+                33.00001538626077
+              ],
+              [
+                119.51152752662244,
+                34.50001608563626
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 119.51152752662244,
+        "bottom": 39.000018183762734,
+        "right": 122.97563075689871,
+        "top": 42.00001958251371,
+        "GEOJOIN": 84,
+        "ChinaAQIPoints_Updated_Name": "Jinzhou",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/jinzhou/beihugongyuan",
+        "ChinaAQIPoints_Updated_file_name": "beihu-park, jinzhou-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 41.1235781,
+        "ChinaAQIPoints_Updated_Long": 121.1346244,
+        "ChinaAQIPoints_Updated_Current AQI": 59,
+        "Monthly_average": 107.48275862069
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                119.51152752662244,
+                40.50001888313822
+              ],
+              [
+                120.3775533341915,
+                42.00001958251371
+              ],
+              [
+                122.10960494932965,
+                42.00001958251371
+              ],
+              [
+                122.97563075689871,
+                40.50001888313822
+              ],
+              [
+                122.10960494932965,
+                39.000018183762734
+              ],
+              [
+                120.3775533341915,
+                39.000018183762734
+              ],
+              [
+                119.51152752662244,
+                40.50001888313822
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 119.51152752662244,
+        "bottom": 42.00001958251371,
+        "right": 122.97563075689871,
+        "top": 45.00002098126468,
+        "GEOJOIN": 85,
+        "ChinaAQIPoints_Updated_Name": "Fuxin",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/fuxin",
+        "ChinaAQIPoints_Updated_file_name": "fuxin-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 42.1058398,
+        "ChinaAQIPoints_Updated_Long": 121.6143027,
+        "ChinaAQIPoints_Updated_Current AQI": 68,
+        "Monthly_average": 122.48275862069
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                119.51152752662244,
+                43.5000202818892
+              ],
+              [
+                120.3775533341915,
+                45.00002098126468
+              ],
+              [
+                122.10960494932965,
+                45.00002098126468
+              ],
+              [
+                122.97563075689871,
+                43.5000202818892
+              ],
+              [
+                122.10960494932965,
+                42.00001958251371
+              ],
+              [
+                120.3775533341915,
+                42.00001958251371
+              ],
+              [
+                119.51152752662244,
+                43.5000202818892
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 122.10960494932965,
+        "bottom": 37.50001748438724,
+        "right": 125.5737081796059,
+        "top": 40.50001888313822,
+        "GEOJOIN": 78,
+        "ChinaAQIPoints_Updated_Name": "Dandong",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/dandong/yuanbaoshan",
+        "ChinaAQIPoints_Updated_file_name": "yuanbaoshan,-dandong , dandong-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 40.0223311,
+        "ChinaAQIPoints_Updated_Long": 124.3082702,
+        "ChinaAQIPoints_Updated_Current AQI": 42,
+        "Monthly_average": 119.551724137931
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                122.10960494932965,
+                39.000018183762734
+              ],
+              [
+                122.97563075689871,
+                40.50001888313822
+              ],
+              [
+                124.70768237203684,
+                40.50001888313822
+              ],
+              [
+                125.5737081796059,
+                39.000018183762734
+              ],
+              [
+                124.70768237203684,
+                37.50001748438724
+              ],
+              [
+                122.97563075689871,
+                37.50001748438724
+              ],
+              [
+                122.10960494932965,
+                39.000018183762734
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 122.10960494932965,
+        "bottom": 40.50001888313822,
+        "right": 125.5737081796059,
+        "top": 43.5000202818892,
+        "GEOJOIN": 76,
+        "ChinaAQIPoints_Updated_Name": "Shenyang",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/shenyang",
+        "ChinaAQIPoints_Updated_file_name": "shenyang-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 41.8106167,
+        "ChinaAQIPoints_Updated_Long": 123.3850874,
+        "ChinaAQIPoints_Updated_Current AQI": 109,
+        "Monthly_average": 175.586206896552
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                122.10960494932965,
+                42.00001958251371
+              ],
+              [
+                122.97563075689871,
+                43.5000202818892
+              ],
+              [
+                124.70768237203684,
+                43.5000202818892
+              ],
+              [
+                125.5737081796059,
+                42.00001958251371
+              ],
+              [
+                124.70768237203684,
+                40.50001888313822
+              ],
+              [
+                122.97563075689871,
+                40.50001888313822
+              ],
+              [
+                122.10960494932965,
+                42.00001958251371
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 122.10960494932965,
+        "bottom": 43.5000202818892,
+        "right": 125.5737081796059,
+        "top": 46.500021680640174,
+        "GEOJOIN": 88,
+        "ChinaAQIPoints_Updated_Name": "Baicheng",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/baicheng/shihuanbaoju",
+        "ChinaAQIPoints_Updated_file_name": "city-epa, baicheng-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 45.5677296,
+        "ChinaAQIPoints_Updated_Long": 122.7659386,
+        "ChinaAQIPoints_Updated_Current AQI": 68,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                122.10960494932965,
+                45.00002098126468
+              ],
+              [
+                122.97563075689871,
+                46.500021680640174
+              ],
+              [
+                124.70768237203684,
+                46.500021680640174
+              ],
+              [
+                125.5737081796059,
+                45.00002098126468
+              ],
+              [
+                124.70768237203684,
+                43.5000202818892
+              ],
+              [
+                122.97563075689871,
+                43.5000202818892
+              ],
+              [
+                122.10960494932965,
+                45.00002098126468
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 122.10960494932965,
+        "bottom": 46.500021680640174,
+        "right": 125.5737081796059,
+        "top": 49.500023079391156,
+        "GEOJOIN": 74,
+        "ChinaAQIPoints_Updated_Name": "Qiqihar",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/xinganmeng/shenghuaxinzhiyaochang",
+        "ChinaAQIPoints_Updated_file_name": "sh?ng-hu?x?n zh?y?o ch?ng, hinggan meng-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 47.3446329,
+        "ChinaAQIPoints_Updated_Long": 123.653687,
+        "ChinaAQIPoints_Updated_Current AQI": 68,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                122.10960494932965,
+                48.000022380015665
+              ],
+              [
+                122.97563075689871,
+                49.500023079391156
+              ],
+              [
+                124.70768237203684,
+                49.500023079391156
+              ],
+              [
+                125.5737081796059,
+                48.000022380015665
+              ],
+              [
+                124.70768237203684,
+                46.500021680640174
+              ],
+              [
+                122.97563075689871,
+                46.500021680640174
+              ],
+              [
+                122.10960494932965,
+                48.000022380015665
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 124.70768237203684,
+        "bottom": 39.000018183762734,
+        "right": 128.1717856023131,
+        "top": 42.00001958251371,
+        "GEOJOIN": 77,
+        "ChinaAQIPoints_Updated_Name": "Tonghua",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/tonghua/tielu",
+        "ChinaAQIPoints_Updated_file_name": "railway,-tonghua-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 41.7196693,
+        "ChinaAQIPoints_Updated_Long": 125.9061498,
+        "ChinaAQIPoints_Updated_Current AQI": 55,
+        "Monthly_average": 0
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                124.70768237203684,
+                40.50001888313822
+              ],
+              [
+                125.5737081796059,
+                42.00001958251371
+              ],
+              [
+                127.30575979474403,
+                42.00001958251371
+              ],
+              [
+                128.1717856023131,
+                40.50001888313822
+              ],
+              [
+                127.30575979474403,
+                39.000018183762734
+              ],
+              [
+                125.5737081796059,
+                39.000018183762734
+              ],
+              [
+                124.70768237203684,
+                40.50001888313822
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 124.70768237203684,
+        "bottom": 42.00001958251371,
+        "right": 128.1717856023131,
+        "top": 45.00002098126468,
+        "GEOJOIN": 87,
+        "ChinaAQIPoints_Updated_Name": "Changchun",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/changchun/yuanlinchu",
+        "ChinaAQIPoints_Updated_file_name": "forest-area, changchun-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 43.8205703,
+        "ChinaAQIPoints_Updated_Long": 125.3488506,
+        "ChinaAQIPoints_Updated_Current AQI": 57,
+        "Monthly_average": 144.413793103448
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                124.70768237203684,
+                43.5000202818892
+              ],
+              [
+                125.5737081796059,
+                45.00002098126468
+              ],
+              [
+                127.30575979474403,
+                45.00002098126468
+              ],
+              [
+                128.1717856023131,
+                43.5000202818892
+              ],
+              [
+                127.30575979474403,
+                42.00001958251371
+              ],
+              [
+                125.5737081796059,
+                42.00001958251371
+              ],
+              [
+                124.70768237203684,
+                43.5000202818892
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "left": 124.70768237203684,
+        "bottom": 45.00002098126468,
+        "right": 128.1717856023131,
+        "top": 48.000022380015665,
+        "GEOJOIN": 79,
+        "ChinaAQIPoints_Updated_Name": "Harbin",
+        "ChinaAQIPoints_Updated_address": "https://aqicn.org/city/china/haerbin/daowaichengdeguangchang",
+        "ChinaAQIPoints_Updated_file_name": "daowai-chengde square, haerbin-air-quality",
+        "ChinaAQIPoints_Updated_Lat": 45.764232,
+        "ChinaAQIPoints_Updated_Long": 126.543116,
+        "ChinaAQIPoints_Updated_Current AQI": 50,
+        "Monthly_average": 156.344827586207
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                124.70768237203684,
+                46.500021680640174
+              ],
+              [
+                125.5737081796059,
+                48.000022380015665
+              ],
+              [
+                127.30575979474403,
+                48.000022380015665
+              ],
+              [
+                128.1717856023131,
+                46.500021680640174
+              ],
+              [
+                127.30575979474403,
+                45.00002098126468
+              ],
+              [
+                125.5737081796059,
+                45.00002098126468
+              ],
+              [
+                124.70768237203684,
+                46.500021680640174
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
