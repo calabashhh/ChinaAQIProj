@@ -37,7 +37,8 @@
         const map = L.map('map').setView([35.86166, 104.195397], 4); // Centered on China
 
         L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.{ext}', {
-            maxZoom: 16
+            maxZoom: 16,
+            minZoom: 4
         }).addTo(map);
         
         let geojsonLayer;
