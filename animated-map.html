@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated AQI Maps</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+        .legend {
+            padding: 6px 8px;
+            line-height: 18px;
+            background: rgba(255,255,255,0.9);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+        .legend i {
+            width: 18px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+        .color-legend {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    
+    <script>
+        const map = L.map('map').setView([35.86166, 104.195397], 4); // Centered on China
+
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+            maxZoom: 16
+        }).addTo(map);
+        
+        let geojsonLayer;
+        
+        function getColor(value) {
+            return value > 300 ? '#5c0257':
+                   value > 275 ? '#8f0768':
+                   value > 250 ? '#c20654':
+                   value > 225 ? '#db0f3f':
+                   value > 200 ? '#fc2a05':
+                   value > 175 ? '#fc6005':
+                   value > 150 ? '#fc8505':
+                   value > 125 ? '#fcb605':
+                   value > 100 ? '#fcd305':
+                   value > 75 ? '#f1ff2e':
+                   value > 50 ? '#d0ff4f':
+                   value > 25 ? '#29d967':
+                   value > 1 ? '#00b06f':
+                   '#adadad';   
+        }
+
+        function style(feature) {
+            return {
+                fillColor: getColor(feature.properties.Monthly_average),   
+                weight: 2,
+                opacity: 1,
+                color: 'gray',
+                dashArray: '3',
+                fillOpacity: 0.7
+            };
+        }
+        
+        const layerLabels = {
+            'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jan2018_average.geojson': 'January 2018',
+            'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Feb2018_average.geojson': 'February 2018',
+            'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Mar2018_average.geojson': 'March 2018',
+            'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Apr2018_average.geojson': 'April 2018',
+            'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/May2018_average.geojson': 'May 2018',
+            'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jun2018_average.geojson': 'June 2018',
+            'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jul2018_average.geojson': 'July 2018',
+            'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Aug2018_average.geojson': 'August 2018',
+            'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Sep2018_average.geojson': 'September 2018',
+            'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Oct2018_average.geojson': 'October 2018',
+            'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Nov2018_average.geojson': 'November 2018',
+            'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Dec2018_average.geojson': 'December 2018'
+        };
+
+        const legend = L.control({ position: 'bottomright' });
+        
+        legend.onAdd = function () {
+            const div = L.DomUtil.create('div', 'legend');
+            div.innerHTML = '<h4>Current Layer</h4>';
+            
+            // Add color legend
+            div.innerHTML += '<div class="color-legend"><h4>AQI Levels</h4>';
+            const grades = [0, 1, 25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300];
+            for (let i = 0; i < grades.length - 1; i++) {
+                div.innerHTML +=
+                    '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+                    grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+            }
+            div.innerHTML += '</div>';
+            return div;
+        };
+        
+        legend.addTo(map);
+
+        function updateLegend(label) {
+            const legendDiv = document.querySelector('.legend');
+            const colorLegend = legendDiv.querySelector('.color-legend').outerHTML;
+            legendDiv.innerHTML = `<h4>Current Layer</h4><p>${label}</p>${colorLegend}`;
+        }
+
+        const geojsonFiles = Object.keys(layerLabels);
+
+        function loadGeoJson(url) {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (geojsonLayer) {
+                        map.removeLayer(geojsonLayer);
+                    }
+                    geojsonLayer = L.geoJson(data, {
+                        style: style,
+                        onEachFeature: function(feature, layer) {
+                            layer.bindPopup(`AQI: ${feature.properties.Monthly_average}`);
+                        }
+                    }).addTo(map);
+                    
+                    const currentLabel = layerLabels[url];
+                    updateLegend(currentLabel);
+                })
+                .catch(error => console.error('Error loading GeoJSON:', error));
+        }
+
+        let currentIndex = 0;
+        let animationInterval;
+        
+        function animateGeoJson() {
+            if (currentIndex < geojsonFiles.length) {
+                loadGeoJson(geojsonFiles[currentIndex]);
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+                loadGeoJson(geojsonFiles[currentIndex]);
+                currentIndex++;
+            }
+        }
+
+        let isPaused = false;
+        
+        function startAnimation() {
+            animateGeoJson();
+            animationInterval = setInterval(animateGeoJson, 1000);
+        }
+        
+        function toggleAnimation() {
+            isPaused = !isPaused;
+            if (isPaused) {
+                clearInterval(animationInterval);
+            } else {
+                startAnimation();
+            }
+        }
+
+        const playPauseButton = L.control({ position: 'topright' });
+        
+        playPauseButton.onAdd = function () {
+            const div = L.DomUtil.create('div', 'play-pause-control');
+            div.innerHTML = '<button id="play-pause" style="padding: 5px 10px;">Pause</button>';
+            div.style.padding = '5px';
+            div.style.backgroundColor = 'white';
+            div.style.borderRadius = '5px';
+            div.style.cursor = 'pointer';
+            div.onclick = function () {
+                toggleAnimation();
+                document.getElementById('play-pause').textContent = isPaused ? 'Play' : 'Pause';
+            };
+            return div;
+        };
+        
+        playPauseButton.addTo(map);
+        
+        // Start the animation when the page loads
+        startAnimation();
+    </script>
+</body>
+</html>
