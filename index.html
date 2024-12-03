@@ -38,7 +38,8 @@
 
         L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.{ext}', {
             maxZoom: 20,
-            minZoom: 4
+            minZoom: 4,
+            ext: 'png'
         }).addTo(map);
         
         let geojsonLayer;
