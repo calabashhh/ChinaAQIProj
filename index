@@ -48,15 +48,34 @@
         
          let geojsonLayer = L.geoJson().addTo(map);
         
-        // Define the circleMarker style
-    const pointStyle = {
-        radius: 2,               // Size of the red dot
-        fillColor: "red",        // Fill color (red)
-        color: "red",            // Border color
-        weight: 1,               // Border width
-        opacity: 1,              // Border opacity
-        fillOpacity: 0.8         // Fill opacity
-    };
+        // Define the style
+     function getColor(value) {
+                 return value > 300 ? '#5c0257':
+                        value > 275 ? '#8f0768':
+                        value > 250 ? '#c20654':
+                        value > 225 ? '#db0f3f':
+                        value > 200 ? '#fc2a05':
+                        value > 175 ? '#fc6005':
+                        value > 150 ? '#fc8505':
+                        value > 125 ? '#fcb605':
+                        value > 100 ? '#fcd305':
+                        value > 75 ? '#f1ff2e':
+                        value > 50 ? '#d0ff4f':
+                       value > 25 ? '#29d967':
+                        value > 1 ? '#00b06f':
+                                          '#adadad';   
+            }
+
+            function style(feature){
+                return {
+                    fillColor: getColor(feature.properties.Monthly_average),   
+                    weight: 2,
+                    opacity: 1,
+                    color: 'gray',
+                    dashArray: '3',
+                    fillOpacity: 0.5
+                };
+            }
         
                
         // Define labels for the GeoJSON layers
