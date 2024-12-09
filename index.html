@@ -12,21 +12,37 @@
             width: 100%;
         }
         .legend {
-            padding: 6px 8px;
-            line-height: 18px;
+            padding: 10px 15px;
+            line-height: 24px;
             background: rgba(255,255,255,0.9);
             box-shadow: 0 0 15px rgba(0,0,0,0.2);
             border-radius: 5px;
+            font-size: 24px; /* Increased base font size */
+        }
+        .legend h1 {
+            font-size: 28px;
+            margin: 0 0 10px 0;
+        }
+        .legend h4 {
+            font-size: 24px;
+            margin: 10px 0;
         }
         .legend i {
-            width: 18px;
-            height: 18px;
+            width: 30px;
+            height: 30px;
             float: left;
-            margin-right: 8px;
-            opacity: 0.7;
+            margin-right: 15px;
+            opacity: 0.9;
+            border: 1px solid #666;
         }
         .color-legend {
-            margin-top: 10px;
+            margin-top: 15px;
+        }
+        .legend-item {
+            clear: both;
+            margin-bottom: 8px;
+            height: 30px;
+            line-height: 30px;
         }
     </style>
 </head>
@@ -34,7 +50,7 @@
     <div id="map"></div>
     
     <script>
-        const map = L.map('map').setView([35.86166, 104.195397], 5); // Centered on China
+        const map = L.map('map').setView([35.86166, 104.195397], 5);
 
         L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
                attribution: '© OpenStreetMap',
@@ -221,19 +237,22 @@
         
         };
 
-        const legend = L.control({ position: 'bottomright' });
+             const legend = L.control({ position: 'bottomright' });
         
         legend.onAdd = function () {
             const div = L.DomUtil.create('div', 'legend');
             div.innerHTML = '<h1>Current Layer</h1>';
             
-            // Add color legend
+            // Add color legend with improved layout
             div.innerHTML += '<div class="color-legend"><h4>AQI Levels</h4>';
+            
             const grades = [0, 1, 25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300];
             for (let i = 0; i < grades.length - 1; i++) {
                 div.innerHTML +=
+                    '<div class="legend-item">' +
                     '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-                    grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+                    grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] : '+') +
+                    '</div>';
             }
             div.innerHTML += '</div>';
             return div;
@@ -244,7 +263,7 @@
         function updateLegend(label) {
             const legendDiv = document.querySelector('.legend');
             const colorLegend = legendDiv.querySelector('.color-legend').outerHTML;
-            legendDiv.innerHTML = `<h1>Current Layer</h1><p>${label}</p>${colorLegend}`;
+            legendDiv.innerHTML = `<h1>Current Layer</h1><p style="font-size: 24px;">${label}</p>${colorLegend}`;
         }
 
         const geojsonFiles = Object.keys(layerLabels);
