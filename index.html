@@ -46,6 +46,8 @@
             height: 30px;
             margin-right: 15px;
             margin-bottom: -8px;
+            position: relative; /* Add this */
+            z-index: 1000;
         }
         .color-legend {
             margin-top: 15px;
@@ -318,8 +320,18 @@
             
                     function updateLegend(label) {
                         const legendDiv = document.querySelector('.legend');
-                        const colorLegend = legendDiv.querySelector('.color-legend').outerHTML;
-                        legendDiv.innerHTML = `<h1>Current Layer</h1><p style="font-size: 14px;">${label}</p>${colorLegend}`;
+                        // Instead of getting the outerHTML, let's just update the label
+                        const titleElement = legendDiv.querySelector('h1');
+                        const labelElement = legendDiv.querySelector('p') || document.createElement('p');
+                        
+                        titleElement.textContent = 'Current Layer';
+                        labelElement.textContent = label;
+                        labelElement.style.fontSize = '14px';
+                        
+                        // Insert the label after the title if it's new
+                        if (!legendDiv.contains(labelElement)) {
+                            titleElement.after(labelElement);
+                        }
                     }
             
                     const geojsonFiles = Object.keys(layerLabels);
