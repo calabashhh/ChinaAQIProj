@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>China AQI 2014-2024</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/mountianicon.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+       
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+        .legend {
+            padding: 10px 15px;
+            line-height: 14px;
+            background: rgba(255,255,255,0.9);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .legend h1 {
+            font-size: 28px;
+            margin: 0 0 10px 0;
+        }
+        .legend h4 {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .legend i {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
+            margin-bottom: -8px;
+        }
+        .color-legend {
+            margin-top: 15px;
+        }
+        .legend-item {
+            margin-bottom: 12px;
+            white-space: nowrap;
+        }
+    </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">AQI Map</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Patterns and Change</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Works Cited</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">Air Across China 2014 - 2024</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">Monthly pm2.5 averages as seen for 10 years</p>
+            </div>
+        </header>
+        <!-- Portfolio Section-->
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">AQI Map</h2>
+                <!-- Icon Divider-->
+                
+                    
+                <div id="map"></div>
+    
+                <script>
+                    const map = L.map('map').setView([35.86166, 104.195397], 4);
+            
+                    L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+                        attribution: '© OpenStreetMap',
+                        maxZoom: 20,
+                        minZoom: 4
+                    }).addTo(map);
+                    
+                    let geojsonLayer;
+                    
+                    function getColor(value) {
+                        return value > 300 ? '#5c0257':
+                               value > 275 ? '#8f0768':
+                               value > 250 ? '#c20654':
+                               value > 225 ? '#db0f3f':
+                               value > 200 ? '#fc2a05':
+                               value > 175 ? '#fc6005':
+                               value > 150 ? '#fc8505':
+                               value > 125 ? '#fcb605':
+                               value > 100 ? '#fcd305':
+                               value > 75 ? '#f1ff2e':
+                               value > 50 ? '#d0ff4f':
+                               value > 25 ? '#29d967':
+                               value > 1 ? '#00b06f':
+                               '#adadad';   
+                    }
+            
+                    function style(feature) {
+                        return {
+                            fillColor: getColor(feature.properties.Monthly_average),   
+                            weight: 0.5,<
+                            opacity: 1,
+                            color: 'gray',
+                            dashArray: '1',
+                            fillOpacity: 0.7
+                        };
+                    }
+                    
+                    const layerLabels = {
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jan2014_average.geojson': 'January 2014',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Feb2014_average.geojson': 'February 2014',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Mar2014_average.geojson': 'March 2014',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Apr2014_average.geojson': 'April 2014',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/May2014_average.geojson': 'May 2014',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jun2014_average.geojson': 'June 2014',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jul2014_average.geojson': 'July 2014',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Aug2014_average.geojson': 'August 2014',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Sep2014_average.geojson': 'September 2014',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Oct2014_average.geojson': 'October 2014',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Nov2014_average.geojson': 'November 2014',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Dec2014_average.geojson': 'December 2014',
+            
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jan2015_average.geojson': 'January 2015',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Feb2015_average.geojson': 'February 2015',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Mar2015_average.geojson': 'March 2015',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Apr2015_average.geojson': 'April 2015',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/May2015_average.geojson': 'May 2015',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jun2015_average.geojson': 'June 2015',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jul2015_average.geojson': 'July 2015',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Aug2015_average.geojson': 'August 2015',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Sep2015_average.geojson': 'September 2015',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Oct2015_average.geojson': 'October 2015',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Nov2015_average.geojson': 'November 2015',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Dec2015_average.geojson': 'December 2015',
+            
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jan2016_average.geojson': 'January 2016',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Feb2016_average.geojson': 'February 2016',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Mar2016_average.geojson': 'March 2016',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Apr2016_average.geojson': 'April 2016',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/May2016_average.geojson': 'May 2016',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jun2016_average.geojson': 'June 2016',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jul2016_average.geojson': 'July 2016',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Aug2016_average.geojson': 'August 2016',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Sep2016_average.geojson': 'September 2016',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Oct2016_average.geojson': 'October 2016',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Nov2016_average.geojson': 'November 2016',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Dec2016_average.geojson': 'December 2016',
+                    
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jan2017_average.geojson': 'January 2017',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Feb2017_average.geojson': 'February 2017',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Mar2017_average.geojson': 'March 2017',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Apr2017_average.geojson': 'April 2017',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/May2017_average.geojson': 'May 2017',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jun2017_average.geojson': 'June 2017',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jul2017_average.geojson': 'July 2017',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Aug2017_average.geojson': 'August 2017',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Sep2017_average.geojson': 'September 2017',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Oct2017_average.geojson': 'October 2017',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Nov2017_average.geojson': 'November 2017',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Dec2017_average.geojson': 'December 2017',
+            
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jan2018_average.geojson': 'January 2018',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Feb2018_average.geojson': 'February 2018',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Mar2018_average.geojson': 'March 2018',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Apr2018_average.geojson': 'April 2018',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/May2018_average.geojson': 'May 2018',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jun2018_average.geojson': 'June 2018',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jul2018_average.geojson': 'July 2018',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Aug2018_average.geojson': 'August 2018',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Sep2018_average.geojson': 'September 2018',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Oct2018_average.geojson': 'October 2018',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Nov2018_average.geojson': 'November 2018',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Dec2018_average.geojson': 'December 2018',
+            
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jan2019_average.geojson': 'January 2019',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Feb2019_average.geojson': 'February 2019',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Mar2019_average.geojson': 'March 2019',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Apr2019_average.geojson': 'April 2019',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/May2019_average.geojson': 'May 2019',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jun2019_average.geojson': 'June 2019',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jul2019_average.geojson': 'July 2019',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Aug2019_average.geojson': 'August 2019',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Sep2019_average.geojson': 'September 2019',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Oct2019_average.geojson': 'October 2019',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Nov2019_average.geojson': 'November 2019',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Dec2019_average.geojson': 'December 2019',
+            
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jan2020_average.geojson': 'January 2020',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Feb2020_average.geojson': 'February 2020',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Mar2020_average.geojson': 'March 2020',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Apr2020_average.geojson': 'April 2020',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/May2020_average.geojson': 'May 2020',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jun2020_average.geojson': 'June 2020',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jul2020_average.geojson': 'July 2020',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Aug2020_average.geojson': 'August 2020',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Sep2020_average.geojson': 'September 2020',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Oct2020_average.geojson': 'October 2020',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Nov2020_average.geojson': 'November 2020',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Dec2020_average.geojson': 'December 2020',
+            
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jan2021_average.geojson': 'January 2021',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Feb2021_average.geojson': 'February 2021',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Mar2021_average.geojson': 'March 2021',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Apr2021_average.geojson': 'April 2021',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/May2021_average.geojson': 'May 2021',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jun2021_average.geojson': 'June 2021',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jul2021_average.geojson': 'July 2021',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Aug2021_average.geojson': 'August 2021',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Sep2021_average.geojson': 'September 2021',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Oct2021_average.geojson': 'October 2021',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Nov2021_average.geojson': 'November 2021',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Dec2021_average.geojson': 'December 2021',
+            
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jan2022_average.geojson': 'January 2022',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Feb2022_average.geojson': 'February 2022',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Mar2022_average.geojson': 'March 2022',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Apr2022_average.geojson': 'April 2022',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/May2022_average.geojson': 'May 2022',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jun2022_average.geojson': 'June 2022',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jul2022_average.geojson': 'July 2022',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Aug2022_average.geojson': 'August 2022',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Sep2022_average.geojson': 'September 2022',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Oct2022_average.geojson': 'October 2022',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Nov2022_average.geojson': 'November 2022',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Dec2022_average.geojson': 'December 2022',
+            
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jan2023_average.geojson': 'January 2023',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Feb2023_average.geojson': 'February 2023',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Mar2023_average.geojson': 'March 2023',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Apr2023_average.geojson': 'April 2023',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/May2023_average.geojson': 'May 2023',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jun2023_average.geojson': 'June 2023',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jul2023_average.geojson': 'July 2023',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Aug2023_average.geojson': 'August 2023',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Sep2023_average.geojson': 'September 2023',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Oct2023_average.geojson': 'October 2023',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Nov2023_average.geojson': 'November 2023',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Dec2023_average.geojson': 'December 2023',
+            
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jan2024_average.geojson': 'January 2024',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Feb2024_average.geojson': 'February 2024',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Mar2024_average.geojson': 'March 2024',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Apr2024_average.geojson': 'April 2024',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/May2024_average.geojson': 'May 2024',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jun2024_average.geojson': 'June 2024',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jul2024_average.geojson': 'July 2024',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Aug2024_average.geojson': 'August 2024',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Sep2024_average.geojson': 'September 2024',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Oct2024_average.geojson': 'October 2024',
+                        'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Nov2024_average.geojson': 'November 2024',
+                        
+                    
+            
+            
+                    
+                    };
+            
+                         const legend = L.control({ position: 'bottomright' });
+                    
+                    legend.onAdd = function () {
+                        const div = L.DomUtil.create('div', 'legend');
+                        div.innerHTML = '<h1>Current Layer</h1>';
+                        
+                        div.innerHTML += '<div class="color-legend"><h4>AQI Levels</h4>';
+                        
+                        const grades = [0, 1, 25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300];
+                        for (let i = 0; i < grades.length - 1; i++) {
+                            const color = getColor(grades[i] + 1);
+                            div.innerHTML +=
+                                '<div class="legend-item">' +
+                                `<i style="background: ${color}; border: 1px solid #666;"></i> ` +
+                                `${grades[i]}${grades[i + 1] ? '&ndash;' + grades[i + 1] : '+'}</div>`;
+                        }
+                        
+                        div.innerHTML += '</div>';
+                        return div;
+                    };
+                    
+                    legend.addTo(map);
+            
+                    function updateLegend(label) {
+                        const legendDiv = document.querySelector('.legend');
+                        const colorLegend = legendDiv.querySelector('.color-legend').outerHTML;
+                        legendDiv.innerHTML = `<h1>Current Layer</h1><p style="font-size: 14px;">${label}</p>${colorLegend}`;
+                    }
+            
+                    const geojsonFiles = Object.keys(layerLabels);
+            
+                    function loadGeoJson(url) {
+                        fetch(url)
+                            .then(response => response.json())
+                            .then(data => {
+                                if (geojsonLayer) {
+                                    map.removeLayer(geojsonLayer);
+                                }
+                                geojsonLayer = L.geoJson(data, {
+                                    style: style,
+                                    onEachFeature: function(feature, layer) {
+                                        layer.bindPopup(`AQI: ${feature.properties.Monthly_average}`);
+                                    }
+                                }).addTo(map);
+                                
+                                const currentLabel = layerLabels[url];
+                                updateLegend(currentLabel);
+                            })
+                            .catch(error => console.error('Error loading GeoJSON:', error));
+                    }
+            
+                    let currentIndex = 0;
+                    let animationInterval;
+                    
+                    function animateGeoJson() {
+                        if (currentIndex < geojsonFiles.length) {
+                            loadGeoJson(geojsonFiles[currentIndex]);
+                            currentIndex++;
+                        } else {
+                            currentIndex = 0;
+                            loadGeoJson(geojsonFiles[currentIndex]);
+                            currentIndex++;
+                        }
+                    }
+            
+                    let isPaused = false;
+                    
+                    function startAnimation() {
+                        animateGeoJson();
+                        animationInterval = setInterval(animateGeoJson, 2000);
+                    }
+                    
+                    function toggleAnimation() {
+                        isPaused = !isPaused;
+                        if (isPaused) {
+                            clearInterval(animationInterval);
+                        } else {
+                            startAnimation();
+                        }
+                    }
+            
+                    const playPauseButton = L.control({ position: 'topright' });
+                    
+                    playPauseButton.onAdd = function () {
+                        const div = L.DomUtil.create('div', 'play-pause-control');
+                        div.innerHTML = '<button id="play-pause" style="padding: 5px 10px;">Pause</button>';
+                        div.style.padding = '5px';
+                        div.style.backgroundColor = 'white';
+                        div.style.borderRadius = '5px';
+                        div.style.cursor = 'pointer';
+                        div.onclick = function () {
+                            toggleAnimation();
+                            document.getElementById('play-pause').textContent = isPaused ? 'Play' : 'Pause';
+                        };
+                        return div;
+                    };
+                    
+                    playPauseButton.addTo(map);
+                    
+                    startAnimation();
+                </script>
+
+
+                
+                    
+
+                </div>
+            </div>
+        </section>
+        <!-- About Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">Patterns and Change</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    
+                </div>
+                <!-- About Section Content-->
+                
+                <h3 class="page-section-heading text-center text-uppercase text-white">Background</h3>
+
+                <p class="text-white">Since the period of Reform and Opening starting in the late 1970s and continuing to this day, China has experienced massive development in terms of economic and industrial output. This effort has raised hundreds of millions of people out of abject poverty and brought new wealth to millions more as well as rejuvenating a nation which had suffered greatly for almost two centuries prior. All this rapid development has of course come at a cost, like most industrializing nations in the past, much of this has come at it root through the burning of coal. Coal is widely and readily available in China and it has fueled everything from factories, electricity production, and even home heating through coal burning stoves. 
+
+                    While there is a range of airborne pollutants produced by our modern economies, this map project focuses on two sizes of airborne particulates. Large sized particulates are those with a diameter between 2.5 and 10 microns and are often more visible in the air causing a haze or smog. Small sized particles are those smaller than 2.5 microns and are generally too small to see. Though both are unhealthy to breath, the small particles are often more concerning as their small size allows them to be absorbed through the lungs and enter the bloodstream. 
+                    
+                    National and International bodies set standards to regulate and classify the amounts of these particulates allowed in the air. The measurement of these particles is presented as an Air Quality Index (AQI) and given a number representing the amount of that particle found within the sample size.
+                    </p>p>                    
+
+
+                <h3 class="page-section-heading text-center text-uppercase text-white">Introduction</h3>
+
+                <p class="text-white">I lived in the Kaifeng, China from 2007 - 2010. While I lived there it was hard not to notice the air pollution and in general the poor air in China due to industrial development is notorious. When I lived in China it was before AQI was regularly measured by anyone in China including the government. The policy set down by the central government was that each city and province should work to increase GDP and thus raise up the country through economic development and investment. This meant that anything which might hinder or slow that increase was ignored or minimized. The official government line was that there was no air pollution in China and recall my Chinese teachers at the time (who dutifully towed the official line) emphatically saying that there was no such thing as air pollution and claiming not to even see the smog outside the window. Of course, this positioning was false and my teachers were not stupid, but they did feel it was important to contradict a foreigner when the honor of their nation was on line no matter how ridiculous the foreigner might find the responses. In private conversations, most educated Chinese people would acknowledge that air pollution was real and undesirable but most would concede that development should proceed unbounded first and then when China was rich it could tend to cleaning up its air. And, many would add, is that not what the US and Europe did too? 
+
+                    This hard stance by the central government has of course changed since I first lived in China. As average people in cities have gotten wealthier and also as more Chinese people have traveled abroad there was a growing desire to clean up the air in China. At first only the US Embassy in Beijing was publicregularly measuring and reporting the AQI from its rooftop. The index they used had a range of 0-500 pm2.5. In the winter of 2012 Beijing (and much of Northern China) experienced truly horrific air pollution, with the US embassy's AQI meter reading "Beyond Index" at above 1200 pm2.5. This and similar shocking events combined with the increased living standards for many urban Chinese began to push for policies limiting air pollution. 
+                    
+                    Now AQI is regularly measured and freely reported across China. Also probably the average Chinese person is much more informed and concerned about the quality of their air than the average person in the US. Of course China still regularly has much worse air pollution than other developed countries, it is much improved from where it was only 10 years ago. I was quite aware of the air pollution when I lived in China; a rare good air day with blue sky was to be savored while a bad air day could literally leave a bad taste in your mouth. However I had no way of measuring or knowing what the actual quality was when I first lived there. I have since been back after AQI was widely measured and reported and I have tried to speculate on just what the levels were like back when I lived there. This curiosity and my experience is what drove me to approach this topic.
+                    </p>
+
+
+                <h3 class="page-section-heading text-center text-uppercase text-white">Patterns and Change - Looking Ahead</h3>
+
+                <p class="text-white">This project is really just a part of a more major project done to test methods and scaleability. My interests in this larger project mainly stem from a theoretical geographic curiousity. I am first interested in regionality and how regions can or may relate to each other as well as find their place within the whole. 
+                    I hesitate to draw any larger conclusions about the causes and nature of air polution at this point. Polution is both a subjective as well as objective entity. 
+                    It can chemically be described, as well understood to come from a wide range and a great acuumulation of causes. Though this inquiry into the causes, harms, and solutions is important; this study drawn more deeply towards other themes such as the relationship between development and various air polution, both in terms of economic development causing air polution the macro scale both in terms of time and space.
+                    
+                    Which leads us to the other theme important to this greater study which is that of not just cyclicality, but cyclicarity - the nature and understanding of cyclical patterns.
+                    Having gathered and managed the vast data, and learned how to display it in dynamic and compelling ways; I look forward to developing a sort of online or interactive atlas of this data. 
+                    </p>
+
+                <!-- About Section Button-->
+               
+            </div>
+        </section>
+        <!-- Contact Section-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Works Cited</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>  
+                </div>
+                <h3>Naughton, Barry. The Chinese Economy. Cambridge, The MIT Press, 2006.</h3>
+                <h3>The World Air Quality Index Project. The World Air Quality Index Project Team, 2024, https://aqicn.org/ . Accessed 10 November. 2024.</h3>
+                <h3>EPA Website. US Environmental Protection Agency, 2024, https://www.epa.gov . Accessed 4 December.</h3>
+                <h3>穹顶之下 Under the Dome. Created and narrated by Chai Jing, 2015.
+                     </h3>
+            </div>
+        </section>
+        <!-- Footer-->
+        
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright &copy; Alex Riepl Broz 2024</small></div>
+        </div>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio Modal 1-->
+        
+        
+        
+        
+        
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
