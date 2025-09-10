@@ -94,7 +94,7 @@
           <div id="map"></div>
 
           <script>
-            const map = L.map('map').setView([36.1589593,116.9714164], 4);
+            const map = L.map('map').setView([35.86166, 104.195397], 4);
 
             L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
               attribution: '© OpenStreetMap', maxZoom: 20, minZoom: 4
@@ -280,7 +280,7 @@
             const legend = L.control({ position: 'bottomright' });
             legend.onAdd = function () {
               const div = L.DomUtil.create('div', 'legend');
-              div.innerHTML = '<h1>Current Layer</h1>';
+              div.innerHTML = '<h1>AQI Legend</h1>';
               div.innerHTML += '<div class="color-legend"><h4>AQI Levels</h4>';
               const grades = [0, 1, 25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300];
               for (let i = 0; i < grades.length - 1; i++) {
@@ -295,13 +295,8 @@
             legend.addTo(map);
 
             function updateLegend(label) {
-              const legendDiv = document.querySelector('.legend');
-              const titleElement = legendDiv.querySelector('h1');
-              const labelElement = legendDiv.querySelector('p') || document.createElement('p');
-              titleElement.textContent = 'Current Layer';
-              labelElement.textContent = label;
-              labelElement.style.fontSize = '14px';
-              if (!legendDiv.contains(labelElement)) { titleElement.after(labelElement); }
+  // Legend stays static; we show only the AQI color scale.
+}
             }
 
             function loadGeoJson(frame) {
@@ -363,7 +358,7 @@
             }
 
             const TimelineControl = L.Control.extend({
-              options: { position: 'topright' },
+              options: { position: 'topleft' },
               onAdd: function() {
                 const container = L.DomUtil.create('div', 'timeline-control');
                 L.DomEvent.disableClickPropagation(container);
