@@ -97,14 +97,14 @@
           <div id="map"></div>
 
           <script>
+            // --- Leaflet map init ---
             const map = L.map('map').setView([35.86166, 104.195397], 4);
-
             L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
               attribution: '© OpenStreetMap', maxZoom: 20, minZoom: 4
             }).addTo(map);
 
+            // --- Styling ---
             let geojsonLayer;
-
             function getColor(value) {
               return value > 300 ? '#5c0257':
                      value > 275 ? '#8f0768':
@@ -121,21 +121,11 @@
                      value > 1 ? '#00b06f':
                      '#adadad';
             }
-
             function style(feature) {
-              return {
-                fillColor: getColor(feature.properties.Monthly_average),
-                weight: 0.5,
-                opacity: 1,
-                color: 'gray',
-                dashArray: '1',
-                fillOpacity: 0.7
-              };
+              return { fillColor: getColor(feature.properties.Monthly_average), weight: 0.5, opacity: 1, color: 'gray', dashArray: '1', fillOpacity: 0.7 };
             }
 
-            // ----------------------
-            // Frames array (url + label)
-            // ----------------------
+            // --- Frames ---
             const frames = [
               { url: 'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Jan2014_average.geojson', label: 'January 2014' },
               { url: 'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Feb2014_average.geojson', label: 'February 2014' },
@@ -280,50 +270,35 @@
               { url: 'https://raw.githubusercontent.com/calabashhh/ChinaAQIProj/main/Nov2024_average.geojson', label: 'November 2024' }
             ];
 
+            // --- Legend (gradient style) already styled via CSS ---
             const legend = L.control({ position: 'bottomright' });
             legend.onAdd = function () {
-              const div = L.DomUtil.create('div', 'legend');
-              div.innerHTML = '<h1>AQI Legend</h1>';
-              div.innerHTML += '<div class="color-legend"><h4>AQI Levels</h4>';
-              const grades = [0, 1, 25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300];
-              for (let i = 0; i < grades.length - 1; i++) {
-                const color = getColor(grades[i] + 1);
-                div.innerHTML += '<div class="legend-item">' +
-                                 `<i style="background: ${color}; border: 1px solid #666;"></i> ` +
-                                 `${grades[i]}${grades[i + 1] ? '&ndash;' + grades[i + 1] : '+'}</div>`;
-              }
-              div.innerHTML += '</div>';
+              const div = L.DomUtil.create('div', 'legend gradient');
+              div.innerHTML = '<h1>AQI Legend</h1>' +
+                '<div class="bar"></div>' +
+                '<div class="ticks">' +
+                '<span>0</span><span>50</span><span>100</span><span>150</span><span>200</span><span>300+</span>' +
+                '</div>';
               return div;
             };
             legend.addTo(map);
 
-            function updateLegend(label) {
-  // Legend stays static; we show only the AQI color scale.
-}
-
-            function loadGeoJson(frame) {
-              fetch(frame.url)
-                .then(response => response.json())
-                .then(data => {
-                  if (geojsonLayer) { map.removeLayer(geojsonLayer); }
-                  geojsonLayer = L.geoJson(data, {
-                    style: style,
-                    onEachFeature: function(feature, layer) {
-                      layer.bindPopup(`AQI: ${feature.properties.Monthly_average}`);
-                    }
-                  }).addTo(map);
-                  
-                })
-                .catch(error => console.error('Error loading GeoJSON:', error));
+            // --- Loader + cache ---
+            const loadingEl = document.getElementById('map-loading');
+            const setLoading = (on) => loadingEl && loadingEl.classList.toggle('show', !!on);
+            const frameCache = new Map();
+            function fetchFrame(url) {
+              if (!frameCache.has(url)) {
+                frameCache.set(url, fetch(url).then(r => r.json()).catch(e => { frameCache.delete(url); throw e; }));
+              }
+              return frameCache.get(url);
             }
 
-            // ----------------------
-            // Timeline / animation controls
-            // ----------------------
+            // --- Animation state ---
             let currentIndex = 0;
             let timer = null;
             let isPlaying = false;
-            let speedMs = 2000; // default
+            let speedMs = 2000;
             const minIndex = 0;
             const maxIndex = frames.length - 1;
 
@@ -340,32 +315,41 @@
             function stepForward() { (currentIndex >= maxIndex) ? showIndex(minIndex) : showIndex(currentIndex + 1); }
             function stepBack() { (currentIndex <= minIndex) ? showIndex(maxIndex) : showIndex(currentIndex - 1); }
 
-            function play() {
-              if (isPlaying) return;
-              isPlaying = true;
-              clearInterval(timer);
-              timer = setInterval(stepForward, speedMs);
-              updatePlayButton();
-            }
+            function play() { if (!isPlaying) { isPlaying = true; clearInterval(timer); timer = setInterval(stepForward, speedMs); updatePlayButton(); } }
             function pause() { isPlaying = false; clearInterval(timer); updatePlayButton(); }
             function togglePlay() { isPlaying ? pause() : play(); }
-            function setSpeed(ms) {
-              speedMs = ms;
-              if (isPlaying) { clearInterval(timer); timer = setInterval(stepForward, speedMs); }
-            }
+            function setSpeed(ms) { speedMs = ms; if (isPlaying) { clearInterval(timer); timer = setInterval(stepForward, speedMs); } }
             function updatePlayButton() {
               const btn = document.getElementById('timeline-play');
               if (btn) btn.textContent = isPlaying ? '⏸' : '⏵';
               if (btn) btn.setAttribute('aria-pressed', isPlaying ? 'true' : 'false');
             }
 
+            // --- Data load ---
+            function loadGeoJson(frame) {
+              setLoading(true);
+              fetchFrame(frame.url)
+                .then(data => {
+                  if (geojsonLayer) map.removeLayer(geojsonLayer);
+                  geojsonLayer = L.geoJson(data, {
+                    style: style,
+                    onEachFeature: (feature, layer) => layer.bindPopup(`AQI: ${feature.properties.Monthly_average}`)
+                  }).addTo(map);
+                })
+                .catch(err => console.error('Error loading GeoJSON:', err))
+                .finally(() => setLoading(false));
+
+              const next = (currentIndex + 1) % frames.length;
+              fetchFrame(frames[next].url).catch(() => {});
+            }
+
+            // --- Control ---
             const TimelineControl = L.Control.extend({
               options: { position: 'topleft' },
               onAdd: function() {
                 const container = L.DomUtil.create('div', 'timeline-control');
                 L.DomEvent.disableClickPropagation(container);
                 L.DomEvent.disableScrollPropagation(container);
-
                 container.innerHTML = `
                   <div class="timeline-row" id="year-jumps"></div>
                   <div class="timeline-row">
@@ -382,25 +366,20 @@
                   <div class="timeline-row">
                     <input id="timeline-slider" class="timeline-slider" type="range" min="${minIndex}" max="${maxIndex}" step="1" value="${currentIndex}">
                     <span id="timeline-label" class="timeline-label" aria-live="polite"></span>
-                  </div>
-                `;
+                  </div>`;
 
-                // Build year jump buttons for each January
+                // Year jumps (each January)
                 const yearRow = container.querySelector('#year-jumps');
-                const january = [];
                 frames.forEach((f, idx) => {
                   if (f.label && f.label.startsWith('January ')) {
                     const year = f.label.slice(8);
-                    january.push({ year, idx });
+                    const b = document.createElement('button');
+                    b.className = 'timeline-btn';
+                    b.textContent = year;
+                    b.setAttribute('aria-label', 'Jump to January ' + year);
+                    b.addEventListener('click', () => { pause(); showIndex(idx); });
+                    yearRow.appendChild(b);
                   }
-                });
-                january.forEach(({ year, idx }) => {
-                  const b = document.createElement('button');
-                  b.className = 'timeline-btn';
-                  b.textContent = year;
-                  b.setAttribute('aria-label', 'Jump to January ' + year);
-                  b.addEventListener('click', () => { pause(); showIndex(idx); });
-                  yearRow.appendChild(b);
                 });
 
                 container.querySelector('#timeline-back').addEventListener('click', () => { pause(); stepBack(); });
@@ -417,38 +396,17 @@
                   sliderDebounce = setTimeout(() => showIndex(idx), 50);
                 });
 
+                // Init label
                 setTimeout(() => {
                   const labelEl = document.getElementById('timeline-label');
                   if (labelEl) labelEl.textContent = frames[currentIndex].label || `Frame ${currentIndex+1}`;
                 }, 0);
-
                 return container;
               }
             });
-                container.querySelector('#timeline-next').addEventListener('click', () => { pause(); stepForward(); });
-                container.querySelector('#timeline-play').addEventListener('click', () => { togglePlay(); });
-                container.querySelector('#timeline-speed').addEventListener('change', (e) => { setSpeed(parseInt(e.target.value, 10)); });
-
-                const slider = container.querySelector('#timeline-slider');
-                let sliderDebounce;
-                slider.addEventListener('input', (e) => {
-                  pause();
-                  const idx = parseInt(e.target.value, 10);
-                  clearTimeout(sliderDebounce);
-                  sliderDebounce = setTimeout(() => showIndex(idx), 50);
-                });
-
-                setTimeout(() => {
-                  const labelEl = document.getElementById('timeline-label');
-                  if (labelEl) labelEl.textContent = frames[currentIndex].label || `Frame ${currentIndex+1}`;
-                }, 0);
-
-                return container;
-              }
-            });
-
             map.addControl(new TimelineControl());
 
+            // Keyboard shortcuts
             document.addEventListener('keydown', (e) => {
               const tag = (e.target.tagName || '').toLowerCase();
               if (tag === 'input' || tag === 'select' || tag === 'textarea' || e.target.isContentEditable) return;
@@ -460,7 +418,6 @@
             // Start
             showIndex(0);
             play();
-            // If you prefer to start paused: showIndex(0); pause();
           </script>
         </div>
       </div>
@@ -525,5 +482,3 @@
 })();</script>
   </body>
 </html>
-
-
