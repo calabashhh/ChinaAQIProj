@@ -81,7 +81,7 @@
     <header class="masthead bg-primary text-black text-center">
       <div class="container d-flex align-items-center flex-column">
         <h1 class="masthead-heading text-uppercase mb-0">Air Across China 2014 - 2024</h1>
-        <img class="img-fluid" src="Louyang.jpg" alt="A view of the Buddhist Longmen Grottoes in Luoyang, September 2007"/>
+        <img class="img-fluid" src="Louyang.jpg" alt="A view of the Buddhist Longmen Grottoes in Luoyang, September 2007" loading="lazy" decoding="async" style="aspect-ratio: 16/9; width: 100%; height: auto;">
         <p>A view of the Buddhist Longmen Grottoes in Luoyang, September 2007</p>
         <div class="divider-custom divider-light"><div class="divider-custom-line"></div></div>
         <p class="masthead-subheading font-weight-light mb-0">Monthly pm2.5 averages as seen for 10 years</p>
@@ -367,10 +367,11 @@
                 L.DomEvent.disableScrollPropagation(container);
 
                 container.innerHTML = `
+                  <div class="timeline-row" id="year-jumps"></div>
                   <div class="timeline-row">
-                    <button id="timeline-back" class="timeline-btn" title="Previous (←)">⏮</button>
-                    <button id="timeline-play" class="timeline-btn" title="Play/Pause (Space)">⏵</button>
-                    <button id="timeline-next" class="timeline-btn" title="Next (→)">⏭</button>
+                    <button id="timeline-back" class="timeline-btn" aria-label="Previous month" title="Previous (←)">⏮</button>
+                    <button id="timeline-play" class="timeline-btn" aria-label="Play or pause" title="Play/Pause (Space)">⏵</button>
+                    <button id="timeline-next" class="timeline-btn" aria-label="Next month" title="Next (→)">⏭</button>
                     <select id="timeline-speed" class="timeline-speed" title="Speed">
                       <option value="3000">0.5×</option>
                       <option value="2000" selected>1×</option>
@@ -380,11 +381,50 @@
                   </div>
                   <div class="timeline-row">
                     <input id="timeline-slider" class="timeline-slider" type="range" min="${minIndex}" max="${maxIndex}" step="1" value="${currentIndex}">
-                    <span id="timeline-label" class="timeline-label"></span>
+                    <span id="timeline-label" class="timeline-label" aria-live="polite"></span>
                   </div>
                 `;
 
+                // Build year jump buttons for each January
+                const yearRow = container.querySelector('#year-jumps');
+                const january = [];
+                frames.forEach((f, idx) => {
+                  if (f.label && f.label.startsWith('January ')) {
+                    const year = f.label.slice(8);
+                    january.push({ year, idx });
+                  }
+                });
+                january.forEach(({ year, idx }) => {
+                  const b = document.createElement('button');
+                  b.className = 'timeline-btn';
+                  b.textContent = year;
+                  b.setAttribute('aria-label', 'Jump to January ' + year);
+                  b.addEventListener('click', () => { pause(); showIndex(idx); });
+                  yearRow.appendChild(b);
+                });
+
                 container.querySelector('#timeline-back').addEventListener('click', () => { pause(); stepBack(); });
+                container.querySelector('#timeline-next').addEventListener('click', () => { pause(); stepForward(); });
+                container.querySelector('#timeline-play').addEventListener('click', () => { togglePlay(); });
+                container.querySelector('#timeline-speed').addEventListener('change', (e) => { setSpeed(parseInt(e.target.value, 10)); });
+
+                const slider = container.querySelector('#timeline-slider');
+                let sliderDebounce;
+                slider.addEventListener('input', (e) => {
+                  pause();
+                  const idx = parseInt(e.target.value, 10);
+                  clearTimeout(sliderDebounce);
+                  sliderDebounce = setTimeout(() => showIndex(idx), 50);
+                });
+
+                setTimeout(() => {
+                  const labelEl = document.getElementById('timeline-label');
+                  if (labelEl) labelEl.textContent = frames[currentIndex].label || `Frame ${currentIndex+1}`;
+                }, 0);
+
+                return container;
+              }
+            });
                 container.querySelector('#timeline-next').addEventListener('click', () => { pause(); stepForward(); });
                 container.querySelector('#timeline-play').addEventListener('click', () => { togglePlay(); });
                 container.querySelector('#timeline-speed').addEventListener('change', (e) => { setSpeed(parseInt(e.target.value, 10)); });
@@ -436,18 +476,18 @@
         <p class="text-white">Since the period of Reform and Opening starting in the late 1970s and continuing to this day, China has experienced massive development in terms of economic and industrial output...</p>
         <p class="text-white">While there is a range of airborne pollutants produced by our modern economies...</p>
         <p class="text-white">National and International bodies set standards to regulate and classify the amounts of these particulates allowed in the air...</p>
-        <img class="img-fluid" src="aqichart.png" alt="chart showing health effects for exposure to various levels of pm2.5 concentration" />
+        <img class="img-fluid" src="aqichart.png" alt="chart showing health effects for exposure to various levels of pm2.5 concentration" loading="lazy" decoding="async" style="max-width:100%; height:auto;">
         <p>Chart showing health effects for exposure to various levels of pm2.5 concentration</p>
 
         <h3 class="page-section-heading text-center text-uppercase text-white">Introduction</h3>
         <p class="text-white">I lived in the Kaifeng, China from 2007 - 2010...</p>
         <p>...</p>
-        <img class="img-fluid" src="coal1.jpg" alt="Delivering charcoal for cooking and home heating"/>
+        <img class="img-fluid" src="coal1.jpg" alt="Delivering charcoal for cooking and home heating" loading="lazy" decoding="async" style="aspect-ratio: 16/9; width: 100%; height: auto;">
         <p>Delivering charcoal for cooking and home heating, August 2009, Kaifeng</p>
 
         <h3 class="page-section-heading text-center text-uppercase text-white">Patterns and Change - Looking Ahead</h3>
         <p class="text-white">This project is really just a part of a more major project done to test methods and scaleability...</p>
-        <img class="img-fluid" src="ghostmarket.jpg" alt="A lovely sunny day at a ghost market in Kaifeng, note the shaddows"/>
+        <img class="img-fluid" src="ghostmarket.jpg" alt="A lovely sunny day at a ghost market in Kaifeng, note the shaddows" loading="lazy" decoding="async" style="aspect-ratio: 16/9; width: 100%; height: auto;">
         <p>A lovely sunny day at a ghost market in Kaifeng, note the shaddows which are often hidden due to haze, June 2008, Kaifeng</p>
       </div>
     </section>
@@ -457,11 +497,13 @@
       <div class="container">
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Works Cited</h2>
         <div class="divider-custom"><div class="divider-custom-line"></div></div>
-        <h3>Naughton, Barry. The Chinese Economy. Cambridge, The MIT Press, 2006.</h3>
-        <h3>The World Air Quality Index Project. The World Air Quality Index Project Team, 2024, https://aqicn.org/ . Accessed 10 November. 2024.</h3>
-        <h3>EPA Website. US Environmental Protection Agency, 2024, https://www.epa.gov . Accessed 4 December.</h3>
-        <h3>穹顶之下 Under the Dome. Created and narrated by Chai Jing, 2015.</h3>
-        <h4>All photographs are taken by author</h4>
+        <ul class="list-unstyled">
+        <li><strong>Naughton, Barry.</strong> <em>The Chinese Economy.</em> MIT Press, 2006.</li>
+        <li><strong>The World Air Quality Index Project.</strong> The World Air Quality Index Project Team, 2024. <a href="https://aqicn.org">aqicn.org</a>. Accessed 10 November 2024.</li>
+        <li><strong>U.S. Environmental Protection Agency.</strong> 2024. <a href="https://www.epa.gov">epa.gov</a>. Accessed 4 December 2024.</li>
+        <li><strong>穹顶之下 (Under the Dome)</strong>, Chai Jing, 2015.</li>
+        <li>All photographs by the author.</li>
+        </ul>
       </div>
     </section>
 
@@ -474,6 +516,14 @@
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+  <script>(function(){
+  const nav = document.getElementById('mainNav');
+  if (!nav) return;
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 10);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();</script>
   </body>
 </html>
+
 
