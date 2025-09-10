@@ -28,6 +28,8 @@
         box-shadow: 0 0 15px rgba(0,0,0,0.2);
         border-radius: 5px;
         font-size: 14px;
+        pointer-events: none;
+        z-index: 400;
       }
       .legend h1 { font-size: 28px; margin: 0 0 10px 0; }
       .legend h4 { font-size: 14px; margin: 10px 0; }
@@ -45,6 +47,7 @@
         box-shadow: 0 1px 6px rgba(0,0,0,0.25);
         font: 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
         width: 320px;
+        z-index: 1000;
       }
       .timeline-row { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; flex-wrap: wrap; }
       .timeline-row:last-child { margin-bottom: 0; }
@@ -297,7 +300,6 @@
             function updateLegend(label) {
   // Legend stays static; we show only the AQI color scale.
 }
-            }
 
             function loadGeoJson(frame) {
               fetch(frame.url)
@@ -310,7 +312,7 @@
                       layer.bindPopup(`AQI: ${feature.properties.Monthly_average}`);
                     }
                   }).addTo(map);
-                  updateLegend(frame.label);
+                  
                 })
                 .catch(error => console.error('Error loading GeoJSON:', error));
             }
@@ -354,7 +356,7 @@
             function updatePlayButton() {
               const btn = document.getElementById('timeline-play');
               if (btn) btn.textContent = isPlaying ? '⏸' : '⏵';
-              btn?.setAttribute('aria-pressed', isPlaying ? 'true' : 'false');
+              if (btn) btn.setAttribute('aria-pressed', isPlaying ? 'true' : 'false');
             }
 
             const TimelineControl = L.Control.extend({
@@ -474,3 +476,4 @@
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
   </body>
 </html>
+
